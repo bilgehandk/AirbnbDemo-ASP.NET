@@ -1,0 +1,293 @@
+﻿@page
+@model CBTDWeb.Pages.Products.UpsertModel
+@{
+
+        <div class="card shadow border-0 mt-4">
+
+            <div class="card-header bg-black pt-4 pb-3 text-center">
+
+                <h2 class="text-white py-2">@(Model.objProduct.Id == 0 ? "Create" : "Edit") Product</h2>
+
+            </div>
+
+            <div class="card-body p-4">
+
+                <form method="post" onsubmit="return ValidateInput()" enctype="multipart/form-data" class="border p-3">
+
+                    <div class="row">
+
+                        <div class="mb-3">
+
+                            <label asp-for="@Model.objProduct.Name" class="ms-2"></label>
+
+                            <input id="txtName" asp-for="@Model.objProduct.Name" class="form-control" />
+
+                            <span asp-validation-for="@Model.objProduct.Name" class="text-danger"></span>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="@Model.objProduct.Description" class="ms-2"></label>
+
+                            <textarea id="txtDesc" asp-for="@Model.objProduct.Description" class="form-control" rows="3"></textarea>
+
+                            <span asp-validation-for="@Model.objProduct.Description" class="text-danger"></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row pt-2">
+
+                        <div class="col-6">
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.UPC" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.UPC" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.UPC" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.Size" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.Size" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.Size" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="ms-2">Category</label>
+
+                                @Html.DropDownListFor(c =>
+
+                                 c.objProduct.CategoryId,
+
+                                 Model.CategoryList,
+
+                                 "",
+
+                                 new { @class = "form-select" }
+
+                                 )
+
+                                <span asp-validation-for="@Model.objProduct.Category" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="ms-2">Manufacturer"></label>
+
+                                @Html.DropDownListFor(t =>
+
+                                 t.objProduct.ManufacturerId,
+
+                                 Model.ManufacturerList,
+
+                                 "",
+
+                                 new { @class = "form-select" }
+
+                                 )
+
+                                <span asp-validation-for="@Model.objProduct.Manufacturer" class="text-danger"></span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6">
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.ListPrice" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.ListPrice" type="number" step="0.01" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.ListPrice" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.UnitPrice" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.UnitPrice" type="number" step="0.01" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.UnitPrice" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.HalfDozenPrice" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.HalfDozenPrice" type="number" step="0.01" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.HalfDozenPrice" class="text-danger"></span>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label asp-for="@Model.objProduct.DozenPrice" class="ms-2"></label>
+
+                                <input asp-for="@Model.objProduct.DozenPrice" type="number" step="0.01" class="form-control" />
+
+                                <span asp-validation-for="@Model.objProduct.DozenPrice" class="text-danger"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row pt-2">
+
+                        <div class="mb-3">
+
+                            <label for="" class="form-label">@(Model.objProduct.ImageUrl != null ? "Replace " : "")Picture</label>
+
+                            <input class="form-control" type="file" asp-for="@Model.objProduct.ImageUrl">
+
+                            <span class="text-danger" asp-validation-for="@Model.objProduct.ImageUrl"></span>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            @if (Model.objProduct.ImageUrl != null)
+
+                        {
+
+                                <input class="visually-hidden" type="hidden" asp-for="@Model.objProduct.ImageUrl" />
+
+                                <div class="col-4">
+
+                                    <div class="mt-1 form-text">Current picture</div>
+
+                                    <img class="img-thumbnail" src="@Model.objProduct.ImageUrl" />
+
+                                </div>
+
+                        }
+
+                        </div>
+
+                    </div>
+
+                    <div class="row pt-2">
+
+                        <div class="col-6 col-md-3">
+
+                            @if (Model.objProduct.Id != 0)
+
+                        {
+
+                                <input asp-for="@Model.objProduct.Id" type="hidden" />
+
+                        }
+
+
+
+                            <button type="submit" class="btn btn-primary form-control">@(Model.objProduct.Id == 0 ? "Create" : "Update")</button>
+
+                        </div>
+
+                        <div class="col-6 col-md-3">
+
+                            <a asp-page="Index" class="btn btn-outline-primary border form-control">
+
+                                Back to List
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+}
+
+@section Scripts {
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: "lists",
+            menubar: "file edit format"
+        });
+        function ValidateInput() {
+            if (document.getElementById('txtName').value == "") {
+                Swal.fire('Error', 'Please Enter a Product Name', 'error');
+                return false;
+            }
+
+            if (document.getElementById('txtUPC').value == "") {
+                Swal.fire('Error', 'Please Enter a Product UPC', 'error');
+                return false;
+            }
+            if (document.getElementById('txtSize').value == "") {
+                Swal.fire('Error', 'Please Enter Product Size Information', 'error');
+                return false;
+            }
+
+            if ($('#txtUnitPrice').val() < .01) {
+                Swal.fire('Error', 'Please Enter a Unit Price Greater Than $.01', 'error');
+                return false;
+            }
+
+            if ($('#txtListPrice').val() < .01) {
+                Swal.fire('Error', 'Please Enter a List Price Greater Than $.01', 'error');
+                return false;
+            }
+
+            if ($('#txtHalfDozenPrice').val() < .01) {
+                Swal.fire('Error', 'Please Enter a Half Dozen+ Price Greater Than $.01', 'error');
+                return false;
+            }
+
+            if ($('#txtDozenPrice').val() < .01) {
+                Swal.fire('Error', 'Please Enter a Dozen+ Price Greater Than $.01', 'error');
+                return false;
+            }
+
+            if (tinyMCE.get('txtDesc').getContent() == "") {
+                Swal.fire('Error', 'Please Enter a Product Description', 'error');
+                return false;
+            }
+
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire('Error', 'Please Select an Image', 'error')
+                return false
+            }
+
+            if ($('#ddlCategory').prop('selectedIndex') === 0) {
+                Swal.fire('Error', 'Please Select a Category', 'error');
+                return false;
+            }
+
+            if ($('#ddlManufacturer').prop('selectedIndex') === 0) {
+                Swal.fire('Error', 'Please Select a Manufacturer', 'error');
+                return false;
+            }
+            return true;
+        }
+    </script>
+}
+
+        
