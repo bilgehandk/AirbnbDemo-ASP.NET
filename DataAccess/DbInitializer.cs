@@ -69,9 +69,9 @@ namespace DataAccess.DbInitializer
 			_db.SaveChanges();
 			
 			// Odalar ekleniyor
-            var rooms = new List<Room>
+            var rooms = new List<Property>
             {
-                new Room
+                new Property
                 {
                     HomeType = "Apartment",
                     RoomType = "Entire Place",

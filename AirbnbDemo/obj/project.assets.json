@@ -5125,11 +5125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/AirbnbDemo/AirbnbDemo.csproj",
+      "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj",
       "projectName": "AirbnbDemo",
-      "projectPath": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/AirbnbDemo/AirbnbDemo.csproj",
+      "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj",
       "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-      "outputPath": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/AirbnbDemo/obj/",
+      "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
@@ -5144,8 +5144,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/DataAccess/DataAccess.csproj": {
-              "projectPath": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/DataAccess/DataAccess.csproj"
+            "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj": {
+              "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj"
             }
           }
         }

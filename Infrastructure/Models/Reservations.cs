@@ -14,7 +14,7 @@ namespace Infrastructure.Models
 
         [ForeignKey("Room")]
         public int RoomId { get; set; }
-        public Room Room { get; set; }
+        public Property Property { get; set; }
 
         [Required]
         public DateTime StartDate { get; set; }

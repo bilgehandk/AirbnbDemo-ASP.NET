@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
-    public class Room
+    public class Property
     {
         [Key]
         public int Id { get; set; }
