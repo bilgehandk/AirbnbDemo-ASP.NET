@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
-    public class CalenderAvaliability
+    public class Calenderavailability
     {
         [Key]
-        public uint CalenderId { get; set; }
+        public int CalenderId { get; set; }
 
         [ForeignKey("Property")]
-        public long PropertyId { get; set; }
+        public int PropertyId { get; set; }
         public Property Property { get; set; }
 
         [Required]

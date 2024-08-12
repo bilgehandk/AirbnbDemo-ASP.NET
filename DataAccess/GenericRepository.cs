@@ -139,5 +139,22 @@ namespace DataAccess
 
             return queryable.ToList();
         }
+        
+        public int DecrementCount(ShoppingCart shoppingCart, int count)
+        {
+            shoppingCart.Count -= count;
+            return shoppingCart.Count;
+        }
+
+        public int IncrementCount(ShoppingCart shoppingCart, int count)
+        {
+            shoppingCart.Count += count;
+            return shoppingCart.Count;
+        }
+
+
+        
+
+
     }
 }

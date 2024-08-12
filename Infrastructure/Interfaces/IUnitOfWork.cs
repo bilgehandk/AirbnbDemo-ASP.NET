@@ -11,8 +11,8 @@ namespace Infrastructure.Interfaces
         public IGenericRepository<Review> Reviews { get; }
         public IGenericRepository<Media> Media { get; }
         public IGenericRepository<AmenityType> AmenityType { get; }
-        public IGenericRepository<Ammenity> Ammenity { get; }
-        public IGenericRepository<CalenderAvaliability> CalenderAvaliablity { get; }
+        public IGenericRepository<Amenity> Ammenity { get; }
+        public IGenericRepository<Calenderavailability> CalenderAvaliablity { get; }
         public IGenericRepository<Fee> Fee { get; }
         public IGenericRepository<FeeType> FeeType { get; }
         public IGenericRepository<Prices> Prices { get; }

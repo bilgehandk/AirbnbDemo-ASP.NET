@@ -9,7 +9,7 @@ namespace Infrastructure.Models
         public int Property_Id { get; set; }
 
         [ForeignKey("Property")]
-        public long PropertyId { get; set; }
+        public int PropertyId { get; set; }
         public Property Property { get; set; }
 
         [Required]

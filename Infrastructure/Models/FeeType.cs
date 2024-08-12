@@ -16,6 +16,6 @@ namespace Infrastructure.Models
         [MaxLength(255)]
         public string Description { get; set; }
 
-        public ICollection<Fee> Fees { get; set; }
+        public Fee Fee { get; set; }
     }
 }

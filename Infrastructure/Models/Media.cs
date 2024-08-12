@@ -1,17 +1,20 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
     public class Media
     {
-        [Key]
-        public int MediaId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        [MaxLength(255)]
         public string UrlPath { get; set; }
 
-        [Required]
         public bool IsMainImage { get; set; }
+
+        public int PropertyId { get; set; }
+
+        [ForeignKey("PropertyId")]
+        public Property Property { get; set; }
     }
 }

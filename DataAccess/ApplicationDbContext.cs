@@ -20,9 +20,9 @@ namespace DataAccess
         
         public DbSet<AmenityType> AmenityType { get; set; }
         
-        public DbSet<Ammenity> Amenity { get; set; }
+        public DbSet<Amenity> Amenity { get; set; }
         
-        public DbSet<CalenderAvaliability> CalenderAvaliability { get; set; }
+        public DbSet<Calenderavailability> CalenderAvailability { get; set; }
         
         public DbSet<Fee> Fee { get; set; }
         
@@ -31,6 +31,8 @@ namespace DataAccess
         public DbSet<Prices> Prices { get; set; }
         
         public DbSet<ReservationStatus> ReservationStatus { get; set; }
+        public DbSet<OrderHeader> OrderHeaders { get; set; }
+        public DbSet<ShoppingCart> ShoppingCart { get; set; }
         
         
     }

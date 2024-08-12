@@ -1,50 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Models
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
+        [Required]
+        [DisplayName("First Name")]
+        public string? FirstName { get; set; }
 
         [Required]
-        [MaxLength(255)]
-        public string Name { get; set; }
+        [DisplayName("Last Name")]
+        public string? LastName { get; set; }
+
+        [DisplayName("Street Address")]
+        public string? StreetAddress { get; set; }
+
+        public string? City { get; set; }
+        public string? State { get; set; }
+
+        [DisplayName("Postal Code")]
+        public string? PostalCode { get; set; }
+
+        [NotMapped]
+        public string FullName 
+        { 
+            get { return $"{FirstName} {LastName}"; } 
+        }
 
         [Required]
-        [MaxLength(255)]
-        public string Email { get; set; }
-
-        public DateTime? EmailVerifiedAt { get; set; }
-
-        [Required]
-        [MaxLength(255)]
-        public string Password { get; set; }
-
-        [MaxLength(255)]
-        public string RememberToken { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
-
-        [Required]
-        public DateTime UpdatedAt { get; set; }
-
-        [Required]
-        [MaxLength(255)]
-        public string PhoneNumber { get; set; }
-
-        [Required]
-        [MaxLength(255)]
-        public string Description { get; set; }
-
-        [Required]
-        [MaxLength(255)]
         public string ProfileImage { get; set; }
 
-        public ICollection<Property> Properties { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
+        public IEnumerable<Property>? Properties { get; set; }
+        public IEnumerable<Reservation>? Reservations { get; set; }
     }
 }

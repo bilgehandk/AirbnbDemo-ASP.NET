@@ -3,30 +3,29 @@ using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace DataAccess.DbInitializer
 {
     public class DbInitializer : IDbInitializer
     {
         private readonly ApplicationDbContext _db;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public DbInitializer(ApplicationDbContext db, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public DbInitializer(ApplicationDbContext db, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             _userManager = userManager;
             _roleManager = roleManager;
+
         }
+
 
         public void Initialize()
         {
             _db.Database.EnsureCreated();
 
-            // Migrations if they are not applied
+            //migrations if they are not applied
             try
             {
                 if (_db.Database.GetPendingMigrations().Any())
@@ -36,7 +35,7 @@ namespace DataAccess.DbInitializer
             }
             catch (Exception)
             {
-                // Handle the exception appropriately
+
             }
 
             if (_db.ApplicationUsers.Any())
@@ -46,24 +45,26 @@ namespace DataAccess.DbInitializer
 
             // Create roles if they are not created
             _roleManager.CreateAsync(new IdentityRole(SD.AdminRole)).GetAwaiter().GetResult();
-            _roleManager.CreateAsync(new IdentityRole(SD.ShipperRole)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.PropertyOwner)).GetAwaiter().GetResult();
             _roleManager.CreateAsync(new IdentityRole(SD.CustomerRole)).GetAwaiter().GetResult();
 
             // Create at least one "Super Admin" or "Admin"
-            var adminUser = new ApplicationUser
+            _userManager.CreateAsync( new ApplicationUser
             {
-                Name = "Bilgehan",
-                Email = "bilge@bilkent.edu.tr",
+                UserName = "bilgehan@bilkent.edu",
+                Email = "bilgehan@bilkent.edu",
+                FirstName = "Bilgehan",
+                LastName = "Demirkaya",
                 PhoneNumber = "8015556919",
-                Description = "Student",
-                ProfileImage = "/images/CBTD.png",
-                EmailVerifiedAt = DateTime.Now,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now
-            };
+                StreetAddress = "123 Main Street",
+                State = "OR",
+                PostalCode = "84408",
+                City = "Portland",
+                ProfileImage = "/images/CBTD.png"
+            }, "Admin123*").GetAwaiter().GetResult();
             
-            _userManager.CreateAsync(adminUser, "Admin123*").GetAwaiter().GetResult();
-            _userManager.AddToRoleAsync(adminUser, SD.AdminRole).GetAwaiter().GetResult();
+            ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "bilge@bilkent.edu.tr");
+            _userManager.AddToRoleAsync(user, SD.AdminRole).GetAwaiter().GetResult();
 
             _db.SaveChanges();
 
@@ -90,7 +91,7 @@ namespace DataAccess.DbInitializer
                     City = "Cityville",
                     State = "Stateville",
                     LastUpdated = DateTime.Now,
-                    OwnerId = adminUser.Id,
+                    OwnerId = user.Id,
                     Latitude = 40.7128f,
                     Longitude = -74.0060f
                 }
@@ -99,16 +100,16 @@ namespace DataAccess.DbInitializer
             _db.SaveChanges();
 
             // Add CalendarAvailability
-            var calendarAvailabilities = new List<CalenderAvaliability>
+            var calendarAvailabilities = new List<Calenderavailability>
             {
-                new CalenderAvaliability
+                new Calenderavailability
                 {
                     PropertyId = properties.First().Id,
                     StartDate = DateTime.Now.AddDays(20),
                     EndDate = DateTime.Now.AddDays(25)
                 }
             };
-            _db.CalenderAvaliability.AddRange(calendarAvailabilities);
+            _db.CalenderAvailability.AddRange(calendarAvailabilities);
             _db.SaveChanges();
 
             // Add AmenityTypes
@@ -121,12 +122,12 @@ namespace DataAccess.DbInitializer
             _db.SaveChanges();
 
             // Add Amenities
-            var amenities = new List<Ammenity>
+            var amenities = new List<Amenity>
             {
-                new Ammenity
+                new Amenity
                 {
                     PropertyId = properties.First().Id,
-                    AmenityTypeId = amenityTypes.First().AmneityTypeId
+                    AmenityTypeId = amenityTypes.First().Id
                 }
             };
             _db.Amenity.AddRange(amenities);
@@ -137,10 +138,10 @@ namespace DataAccess.DbInitializer
             {
                 new Prices
                 {
-                    PropertyID = properties.First().Id,
+                    PropertyId = properties.First().Id,
                     StartDate = DateTime.Now.AddDays(5),
                     EndDate = DateTime.Now.AddDays(10),
-                    PriceAmount = 150
+                    Amount = 150
                 }
             };
             _db.Prices.AddRange(prices);
@@ -173,13 +174,13 @@ namespace DataAccess.DbInitializer
             {
                 new Reservation
                 {
-                    UserId = adminUser.Id,
+                    ApplicationUserId = user.Id,
                     PropertyId = properties.First().Id,
                     StartDate = DateTime.Now.AddDays(10),
                     EndDate = DateTime.Now.AddDays(15),
                     TotalPrice = 600,
                     LastUpdated = DateTime.Now,
-                    ReservationStatusId = reservationStatuses.First().ReservationStatusId
+                    ReservationStatusId = reservationStatuses.First().Id
                 }
             };
             _db.Reservations.AddRange(reservations);
@@ -203,7 +204,7 @@ namespace DataAccess.DbInitializer
             {
                 new Media
                 {
-                    MediaId = 1,
+                    Id = 1,
                     UrlPath = "room1.jpg",
                     IsMainImage = true
                 }

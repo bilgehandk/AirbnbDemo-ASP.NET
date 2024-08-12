@@ -16,7 +16,8 @@
           "Microsoft.AspNetCore.Identity.UI": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
-          "MimeKit": "4.7.1"
+          "MimeKit": "4.7.1",
+          "Stripe.net": "45.7.0"
         },
         "runtime": {
           "AirbnbDemo.dll": {}
@@ -783,6 +784,26 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Stripe.net/45.7.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "assemblyVersion": "45.7.0.0",
+            "fileVersion": "45.7.0.0"
+          }
+        }
+      },
       "System.Buffers/4.5.0": {},
       "System.CodeDom/4.4.0": {
         "runtime": {
@@ -1514,6 +1535,20 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Stripe.net/45.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y7CM6hnEWoS/CskZYYAa7sCeWNUsfcTJixTgBd5x3Nkuq/aqimge9oZukdRQLSnRQHiC8hZRE1rUJ2Zi0+40Pw==",
+      "path": "stripe.net/45.7.0",
+      "hashPath": "stripe.net.45.7.0.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",

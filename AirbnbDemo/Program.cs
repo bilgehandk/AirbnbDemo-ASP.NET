@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Stripe;
 using Utility;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,11 +22,13 @@ builder.Services.AddScoped<DbInitializer>();
 builder.Services.AddScoped<UnitOfWork>();
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = $"/Identity/Account/Login";
-    options.LogoutPath = $"/Identity/Account/Logout";
-    options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+	options.LoginPath = $"/Identity/Account/Login";
+	options.LogoutPath = $"/Identity/Account/Logout";
+	options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
 });
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 
 builder.Services.AddRazorPages();
@@ -63,3 +66,4 @@ void SeedDatabase()
     var dbInitializer = scope.ServiceProvider.GetRequiredService<DbInitializer>();
     dbInitializer.Initialize();
 }
+

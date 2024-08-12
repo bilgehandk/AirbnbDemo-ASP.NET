@@ -5,18 +5,16 @@ namespace Infrastructure.Models
 {
     public class Review
     {
-        [Key]
-        public int ReviewId { get; set; }
+        public int Id { get; set; }
 
-        [ForeignKey("Reservation")]
         public int ReservationId { get; set; }
+
+        [ForeignKey("ReservationId")]
         public Reservation Reservation { get; set; }
 
-        [Required]
+        [Range(1, 5)]
         public int Rating { get; set; }
 
-        [Required]
-        [MaxLength(255)]
         public string Comment { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oowRC621mJRH1eI/dnfCYIFE187PVjQGozU0H4DUmloRWmqNu6z4Bl51616GvJACbUR0KDOFUOO7lcZyVrwZmQ==",
+  "dgSpecHash": "kk1mJhaWcwAogELU/2pWfY5yyeGw3JGfUWYVfyOwEp4wZx8i9yG7SALtBHLWz40w+uEjqflwc2qNMkLpAS8VGg==",
   "success": true,
   "projectFilePath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,8 @@
     "/Users/bilgehandemirkaya/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/bilgehandemirkaya/.nuget/packages/mimekit/4.7.1/mimekit.4.7.1.nupkg.sha512",
     "/Users/bilgehandemirkaya/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/bilgehandemirkaya/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/bilgehandemirkaya/.nuget/packages/stripe.net/45.7.0/stripe.net.45.7.0.nupkg.sha512",
     "/Users/bilgehandemirkaya/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
     "/Users/bilgehandemirkaya/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/bilgehandemirkaya/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
