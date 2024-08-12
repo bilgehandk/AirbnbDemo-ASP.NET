@@ -6,7 +6,7 @@ namespace Infrastructure.Models
     public class FeeType
     {
         [Key]
-        public uint FeeTypeId { get; set; }
+        public int FeeTypeId { get; set; }
 
         [Required]
         [MaxLength(255)]

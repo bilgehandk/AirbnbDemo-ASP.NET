@@ -6,7 +6,7 @@ namespace Infrastructure.Models
     public class AmenityType
     {
         [Key]
-        public uint AmneityTypeId { get; set; }
+        public int AmneityTypeId { get; set; }
 
         [Required]
         [MaxLength(255)]

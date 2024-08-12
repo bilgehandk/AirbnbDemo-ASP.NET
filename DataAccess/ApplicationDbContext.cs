@@ -12,11 +12,25 @@ namespace DataAccess
            
         }
 
-        public DbSet<Property> Room { get; set; }  //the physical DB table will be named Categories
+        public DbSet<Property> Property { get; set; }  //the physical DB table will be named Categories
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Media> Media { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        
+        public DbSet<AmenityType> AmenityType { get; set; }
+        
+        public DbSet<Ammenity> Amenity { get; set; }
+        
+        public DbSet<CalenderAvaliability> CalenderAvaliability { get; set; }
+        
+        public DbSet<Fee> Fee { get; set; }
+        
+        public DbSet<FeeType> FeeType { get; set; }
+        
+        public DbSet<Prices> Prices { get; set; }
+        
+        public DbSet<ReservationStatus> ReservationStatus { get; set; }
         
         
     }

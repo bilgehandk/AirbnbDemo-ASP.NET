@@ -6,7 +6,7 @@ namespace Infrastructure.Models
     public class ReservationStatus
     {
         [Key]
-        public uint ReservationStatusId { get; set; }
+        public int ReservationStatusId { get; set; }
 
         [Required]
         [MaxLength(255)]
