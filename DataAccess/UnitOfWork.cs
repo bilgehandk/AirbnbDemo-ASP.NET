@@ -12,8 +12,8 @@ public class UnitOfWork : IUnitOfWork
     }
 
     private IGenericRepository<Property> _Room;
-    private IGenericRepository<Reviews> _Reviews;
-    private IGenericRepository<Reservations> _Reservations;
+    private IGenericRepository<Review> _Reviews;
+    private IGenericRepository<Reservation> _Reservations;
     private IGenericRepository<Media> _Media;
 
     public IGenericRepository<ApplicationUser> _ApplicationUser;

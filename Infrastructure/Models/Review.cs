@@ -1,25 +1,22 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
-    public class Reviews
+    public class Review
     {
         [Key]
-        public int Id { get; set; }
+        public int ReviewId { get; set; }
 
-        [ForeignKey("Reservations")]
+        [ForeignKey("Reservation")]
         public int ReservationId { get; set; }
-        public Reservations Reservations { get; set; }
+        public Reservation Reservation { get; set; }
 
         [Required]
         public int Rating { get; set; }
-        
-        [Required]
-        public string Comment { get; set; }
 
-        // Navigation property for Media, if needed
-        public Media Media { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Comment { get; set; }
     }
 }

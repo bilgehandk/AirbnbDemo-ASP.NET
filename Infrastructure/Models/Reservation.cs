@@ -1,19 +1,20 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
-    public class Reservations
+    public class Reservation
     {
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("User")]
-        public string UserId { get; set; } // Update to string for IdentityUser
+        [ForeignKey("ApplicationUser")]
+        public int UserId { get; set; }
         public ApplicationUser User { get; set; }
 
-        [ForeignKey("Room")]
-        public int RoomId { get; set; }
+        [ForeignKey("Property")]
+        public int PropertyId { get; set; }
         public Property Property { get; set; }
 
         [Required]
@@ -23,15 +24,13 @@ namespace Infrastructure.Models
         public DateTime EndDate { get; set; }
 
         [Required]
-        public int Price { get; set; }
+        public int TotalPrice { get; set; }
 
         [Required]
-        public int Total { get; set; }
+        public DateTime LastUpdated { get; set; }
 
-        [Required]
-        public DateTime CreatedAt { get; set; } 
-        
-        [Required]
-        public DateTime UpdatedAt { get; set; }
+        [ForeignKey("ReservationStatus")]
+        public int ReservationStatusId { get; set; }
+        public ReservationStatus ReservationStatus { get; set; }
     }
 }

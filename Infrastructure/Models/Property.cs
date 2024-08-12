@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,61 +11,50 @@ namespace Infrastructure.Models
         public int Id { get; set; }
 
         [Required]
-        public string HomeType { get; set; }
+        [MaxLength(255)]
+        public string PropertyType { get; set; }
 
         [Required]
-        public string RoomType { get; set; } 
+        public int TotalOccupancy { get; set; }
 
         [Required]
-        public int TotalOccupancy { get; set; } 
+        public int TotalBedrooms { get; set; }
 
         [Required]
-        public int TotalBedrooms { get; set; } 
+        public int TotalBathrooms { get; set; }
 
         [Required]
-        public int TotalBathrooms { get; set; } 
+        [MaxLength(255)]
+        public string Description { get; set; }
 
         [Required]
-        public string Summary { get; set; }
-
-        [Required]
+        [MaxLength(255)]
         public string Address { get; set; }
 
         [Required]
-        public bool HasTv { get; set; }
+        [MaxLength(255)]
+        public string City { get; set; }
 
         [Required]
-        public bool HasKitchen { get; set; }
+        [MaxLength(255)]
+        public string State { get; set; }
 
         [Required]
-        public bool HasAirCon { get; set; }
+        public DateTime LastUpdated { get; set; }
 
-        [Required]
-        public bool HasHeating { get; set; }
-
-        [Required]
-        public bool HasInternet { get; set; }
-
-        [Required]
-        public int Price { get; set; }
-
-        [Required]
-        public DateTime PublishedAt { get; set; }
-
-        [ForeignKey("User")]
+        [ForeignKey("Owner")]
         public int OwnerId { get; set; }
         public ApplicationUser Owner { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
-
-        [Required]
-        public DateTime UpdatedAt { get; set; }
 
         [Required]
         public float Latitude { get; set; }
 
         [Required]
         public float Longitude { get; set; }
+
+        public ICollection<Ammenity> Ammenities { get; set; }
+        public ICollection<CalenderAvaliability> CalendarAvailabilities { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Prices> Prices { get; set; }
     }
 }
