@@ -1164,11 +1164,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Utility/Utility.csproj",
+      "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
       "projectName": "Utility",
-      "projectPath": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Utility/Utility.csproj",
+      "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
       "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-      "outputPath": "/Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Utility/obj/",
+      "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
