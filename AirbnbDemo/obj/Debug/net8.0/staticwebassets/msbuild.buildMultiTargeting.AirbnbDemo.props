@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/AirbnbDemo.props" />
+  <Import Project="..\build\AirbnbDemo.props" />
 </Project>

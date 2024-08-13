@@ -47,3 +47,16 @@
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+G:\Metropolia\Metropolia\2024\Summer\ASPNET\source\repos\AirbnbG4\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
