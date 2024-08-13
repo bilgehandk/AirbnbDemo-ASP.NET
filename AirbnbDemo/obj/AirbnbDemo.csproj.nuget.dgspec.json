@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj": {}
+    "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\AirbnbDemo\\AirbnbDemo.csproj": {}
   },
   "projects": {
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj": {
+    "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\AirbnbDemo\\AirbnbDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj",
+        "projectUniqueName": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\AirbnbDemo\\AirbnbDemo.csproj",
         "projectName": "AirbnbDemo",
-        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/AirbnbDemo.csproj",
-        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/obj/",
+        "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\AirbnbDemo\\AirbnbDemo.csproj",
+        "packagesPath": "C:\\Users\\mua\\.nuget\\packages\\",
+        "outputPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\AirbnbDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj": {
-                "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj"
+              "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -36,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -98,37 +105,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj": {
+    "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
+        "projectUniqueName": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
-        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/",
+        "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mua\\.nuget\\packages\\",
+        "outputPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
-                "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj"
+              "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\Infrastructure.csproj"
               },
-              "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
-                "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj"
+              "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\Utility.csproj": {
+                "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\Utility.csproj"
               }
             }
           }
@@ -137,6 +146,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -176,26 +190,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
+    "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/obj/",
+        "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mua\\.nuget\\packages\\",
+        "outputPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -208,6 +224,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -255,26 +276,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
+    "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
+        "projectUniqueName": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\Utility.csproj",
         "projectName": "Utility",
-        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
-        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/",
+        "projectPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\Utility.csproj",
+        "packagesPath": "C:\\Users\\mua\\.nuget\\packages\\",
+        "outputPath": "G:\\Metropolia\\Metropolia\\2024\\Summer\\ASPNET\\source\\repos\\AirbnbG4\\Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -287,6 +310,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -326,7 +354,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
