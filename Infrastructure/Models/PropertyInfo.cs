@@ -33,7 +33,7 @@ namespace Infrastructure.Models
         public double Longitude { get; set; }
 
         // Changed IEnumerable to List to allow adding items
-        public List<Amenity>? Amenities { get; set; } = new List<Amenity>();
+        public List<Amenity> Amenities { get; set; } = new List<Amenity>();
         public List<Media>? MediaItems { get; set; } = new List<Media>();
         public List<Prices>? Prices { get; set; } = new List<Prices>();
     }

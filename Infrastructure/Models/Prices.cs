@@ -13,6 +13,8 @@ namespace Infrastructure.Models
 
         public double Amount { get; set; }
 
+        public List<Fee> Fees;
+
         [ForeignKey("PropertyId")]
         public PropertyInfo PropertyInfo { get; set; }
     }

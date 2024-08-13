@@ -16,7 +16,7 @@ public class UnitOfWork : IUnitOfWork
     private IGenericRepository<Reservation> _Reservations;
     private IGenericRepository<Media> _Media;
     private IGenericRepository<AmenityType> _AmenityType;
-    private IGenericRepository<Amenity> _Ammenity;
+    private IGenericRepository<Amenity> _Amenity;
     private IGenericRepository<Calenderavailability> _CalenderAvaliability;
     private IGenericRepository<Fee> _Fee;
     private IGenericRepository<FeeType> _FeeType;
@@ -108,17 +108,17 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public IGenericRepository<Amenity> Ammenity
+    public IGenericRepository<Amenity> Amenity
     {
         get
         {
 
-            if (_Ammenity == null)
+            if (_Amenity == null)
             {
-                _Ammenity = new GenericRepository<Amenity>(_dbContext);
+                _Amenity = new GenericRepository<Amenity>(_dbContext);
             }
 
-            return _Ammenity;
+            return _Amenity;
         }
     }
 

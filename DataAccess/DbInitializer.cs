@@ -3,6 +3,8 @@ using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Utility;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DataAccess.DbInitializer
 {
@@ -17,15 +19,13 @@ namespace DataAccess.DbInitializer
             _db = db;
             _userManager = userManager;
             _roleManager = roleManager;
-
         }
-
 
         public void Initialize()
         {
             _db.Database.EnsureCreated();
 
-            //migrations if they are not applied
+            // Migrate if needed
             try
             {
                 if (_db.Database.GetPendingMigrations().Any())
@@ -33,9 +33,10 @@ namespace DataAccess.DbInitializer
                     _db.Database.Migrate();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                // Log the exception
+                throw new InvalidOperationException("An error occurred while migrating the database.", ex);
             }
 
             if (_db.ApplicationUsers.Any())
@@ -43,14 +44,15 @@ namespace DataAccess.DbInitializer
                 return; // DB has been seeded
             }
 
-            // Create roles if they are not created
+            // Create roles if they do not exist
             _roleManager.CreateAsync(new IdentityRole(SD.AdminRole)).GetAwaiter().GetResult();
             _roleManager.CreateAsync(new IdentityRole(SD.PropertyOwner)).GetAwaiter().GetResult();
             _roleManager.CreateAsync(new IdentityRole(SD.CustomerRole)).GetAwaiter().GetResult();
 
-            // Create at least one "Super Admin" or "Admin"
-            _userManager.CreateAsync( new ApplicationUser
+            // Create a "Super Admin" or "Admin"
+            var adminUser = new ApplicationUser
             {
+                Id = "123",
                 UserName = "bilgehan@bilkent.edu",
                 Email = "bilgehan@bilkent.edu",
                 FirstName = "Bilgehan",
@@ -61,11 +63,20 @@ namespace DataAccess.DbInitializer
                 PostalCode = "84408",
                 City = "Portland",
                 ProfileImage = "/images/CBTD.png"
-            }, "Admin123*").GetAwaiter().GetResult();
-            
-            ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "bilge@bilkent.edu.tr");
-            _userManager.AddToRoleAsync(user, SD.AdminRole).GetAwaiter().GetResult();
+            };
+            _userManager.CreateAsync(adminUser, "Admin123*").GetAwaiter().GetResult();
+            _userManager.AddToRoleAsync(adminUser, SD.AdminRole).GetAwaiter().GetResult();
 
+            // Save changes to add the admin user to the database
+            _db.SaveChanges();
+
+            // Add AmenityTypes
+            var amenityTypes = new List<AmenityType>
+            {
+                new AmenityType { Name = "WiFi" },
+                new AmenityType { Name = "Air Conditioning" }
+            };
+            _db.AmenityType.AddRange(amenityTypes);
             _db.SaveChanges();
 
             // Add FeeTypes
@@ -77,7 +88,7 @@ namespace DataAccess.DbInitializer
             _db.FeeType.AddRange(feeTypes);
             _db.SaveChanges();
 
-            // Add properties
+            // Add Properties
             var properties = new List<PropertyInfo>
             {
                 new PropertyInfo
@@ -92,34 +103,12 @@ namespace DataAccess.DbInitializer
                     City = "Cityville",
                     State = "Stateville",
                     LastUpdated = DateTime.Now,
-                    OwnerId = user.Id,
-                    Latitude = 40.7128f,
-                    Longitude = -74.0060f
+                    OwnerId = adminUser.Id,
+                    Latitude = 40.7128,
+                    Longitude = -74.0060
                 }
             };
             _db.Property.AddRange(properties);
-            _db.SaveChanges();
-
-            // Add CalendarAvailability
-            var calendarAvailabilities = new List<Calenderavailability>
-            {
-                new Calenderavailability
-                {
-                    PropertyId = properties.First().Id,
-                    StartDate = DateTime.Now.AddDays(20),
-                    EndDate = DateTime.Now.AddDays(25)
-                }
-            };
-            _db.CalenderAvailability.AddRange(calendarAvailabilities);
-            _db.SaveChanges();
-
-            // Add AmenityTypes
-            var amenityTypes = new List<AmenityType>
-            {
-                new AmenityType { Name = "WiFi" },
-                new AmenityType { Name = "Air Conditioning" }
-            };
-            _db.AmenityType.AddRange(amenityTypes);
             _db.SaveChanges();
 
             // Add Amenities
@@ -164,8 +153,8 @@ namespace DataAccess.DbInitializer
             // Add ReservationStatuses
             var reservationStatuses = new List<ReservationStatus>
             {
-                new ReservationStatus { Type = "Confirmed" },
-                new ReservationStatus { Type = "Cancelled" }
+                new ReservationStatus { Id = 1, Type = "Confirmed" },
+                new ReservationStatus { Id = 2, Type = "Cancelled" }
             };
             _db.ReservationStatus.AddRange(reservationStatuses);
             _db.SaveChanges();
@@ -175,7 +164,7 @@ namespace DataAccess.DbInitializer
             {
                 new Reservation
                 {
-                    ApplicationUserId = user.Id,
+                    ApplicationUserId = adminUser.Id,
                     PropertyId = properties.First().Id,
                     StartDate = DateTime.Now.AddDays(10),
                     EndDate = DateTime.Now.AddDays(15),
@@ -205,12 +194,25 @@ namespace DataAccess.DbInitializer
             {
                 new Media
                 {
-                    Id = 1,
-                    UrlPath = "room1.jpg",
-                    IsMainImage = true
+                    UrlPath = "images/room1.jpg",
+                    IsMainImage = true,
+                    PropertyId = properties.First().Id
                 }
             };
             _db.Media.AddRange(mediaItems);
+            _db.SaveChanges();
+
+            // Add CalendarAvailability
+            var calendarAvailabilities = new List<Calenderavailability>
+            {
+                new Calenderavailability
+                {
+                    PropertyId = properties.First().Id,
+                    StartDate = DateTime.Now.AddDays(20),
+                    EndDate = DateTime.Now.AddDays(25)
+                }
+            };
+            _db.CalenderAvailability.AddRange(calendarAvailabilities);
             _db.SaveChanges();
         }
     }
