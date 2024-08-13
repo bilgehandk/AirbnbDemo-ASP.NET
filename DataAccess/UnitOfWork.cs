@@ -11,24 +11,24 @@ public class UnitOfWork : IUnitOfWork
         _dbContext = dbContext;
     }
 
-    private IGenericRepository<Property> _Room;
+    private IGenericRepository<Property> _Property;
     private IGenericRepository<Reviews> _Reviews;
     private IGenericRepository<Reservations> _Reservations;
     private IGenericRepository<Media> _Media;
 
     public IGenericRepository<ApplicationUser> _ApplicationUser;
 
-    public IGenericRepository<Property> Room
+    public IGenericRepository<Property> Property
     {
         get
         {
 
-            if (_Room == null)
+            if (_Property == null)
             {
-                _Room = new GenericRepository<Property>(_dbContext);
+                _Property = new GenericRepository<Property>(_dbContext);
             }
 
-            return _Room;
+            return _Property;
         }
     }
 

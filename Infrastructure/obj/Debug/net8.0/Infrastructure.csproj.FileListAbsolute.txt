@@ -34,3 +34,16 @@
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\USER\source\repos\Aribnb Demo\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
