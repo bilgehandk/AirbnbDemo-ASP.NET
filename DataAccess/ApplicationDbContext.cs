@@ -12,7 +12,7 @@ namespace DataAccess
            
         }
 
-        public DbSet<Property> Property { get; set; }  //the physical DB table will be named Categories
+        public DbSet<PropertyInfo> Property { get; set; }  //the physical DB table will be named Categories
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Media> Media { get; set; }

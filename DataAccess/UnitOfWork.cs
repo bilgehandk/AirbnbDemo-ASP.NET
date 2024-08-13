@@ -11,7 +11,7 @@ public class UnitOfWork : IUnitOfWork
         _dbContext = dbContext;
     }
 
-    private IGenericRepository<Property> _Room;
+    private IGenericRepository<PropertyInfo> _Property;
     private IGenericRepository<Review> _Reviews;
     private IGenericRepository<Reservation> _Reservations;
     private IGenericRepository<Media> _Media;
@@ -122,17 +122,17 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public IGenericRepository<Property> Room
+    public IGenericRepository<PropertyInfo> Property
     {
         get
         {
 
-            if (_Room == null)
+            if (_Property == null)
             {
-                _Room = new GenericRepository<Property>(_dbContext);
+                _Property = new GenericRepository<PropertyInfo>(_dbContext);
             }
 
-            return _Room;
+            return _Property;
         }
     }
 

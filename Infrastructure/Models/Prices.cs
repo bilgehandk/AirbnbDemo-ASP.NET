@@ -14,6 +14,6 @@ namespace Infrastructure.Models
         public double Amount { get; set; }
 
         [ForeignKey("PropertyId")]
-        public Property Property { get; set; }
+        public PropertyInfo PropertyInfo { get; set; }
     }
 }

@@ -76,12 +76,15 @@ namespace DataAccess.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PropertyInfoId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("CalenderId");
 
-                    b.HasIndex("PropertyId");
+                    b.HasIndex("PropertyInfoId");
 
                     b.ToTable("CalenderAvailability");
                 });
@@ -103,12 +106,15 @@ namespace DataAccess.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PropertyInfoId")
+                        .HasColumnType("int");
+
                     b.HasKey("Property_Id");
 
                     b.HasIndex("FeeTypeId")
                         .IsUnique();
 
-                    b.HasIndex("PropertyId");
+                    b.HasIndex("PropertyInfoId");
 
                     b.ToTable("Fee");
                 });
@@ -264,7 +270,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Prices");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Property", b =>
+            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -297,6 +303,10 @@ namespace DataAccess.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("OwnerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PropertyName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -679,7 +689,7 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany("Amenities")
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -687,18 +697,18 @@ namespace DataAccess.Migrations
 
                     b.Navigation("AmenityType");
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Calenderavailability", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany()
-                        .HasForeignKey("PropertyId")
+                        .HasForeignKey("PropertyInfoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Fee", b =>
@@ -709,26 +719,26 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany()
-                        .HasForeignKey("PropertyId")
+                        .HasForeignKey("PropertyInfoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("FeeType");
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Media", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany("MediaItems")
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.OrderHeader", b =>
@@ -742,16 +752,16 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Infrastructure.Models.Prices", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany("Prices")
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Property", b =>
+            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
                 {
                     b.HasOne("Infrastructure.Models.ApplicationUser", null)
                         .WithMany("Properties")
@@ -766,7 +776,7 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Infrastructure.Models.Property", "Property")
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany()
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -780,7 +790,7 @@ namespace DataAccess.Migrations
 
                     b.Navigation("ApplicationUser");
 
-                    b.Navigation("Property");
+                    b.Navigation("PropertyInfo");
 
                     b.Navigation("ReservationStatus");
                 });
@@ -870,7 +880,7 @@ namespace DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Property", b =>
+            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
                 {
                     b.Navigation("Amenities");
 
