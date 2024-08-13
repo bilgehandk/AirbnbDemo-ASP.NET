@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,6 +7,10 @@
     <UserSecretsId>aspnet-CBTDWeb-32debc92-ec8b-4de4-8099-6ba6491c3acd</UserSecretsId>
     <RootNamespace>CBTDWeb</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\TestPage.cshtml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MailKit" Version="4.7.1.1" />
@@ -25,10 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\Products\Index.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Products\Upsert.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Categories\Delete.cshtml" />
@@ -37,6 +37,19 @@
     <_ContentIncludedByDefault Remove="Pages\Manifactors\DeleteManifactors.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Manifactors\ManifactorsIndex.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Manifactors\ManifactorsUpsert.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\TestPage.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\TestPage.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\TestPages\index.cshtml" />
   </ItemGroup>
 
 </Project>
