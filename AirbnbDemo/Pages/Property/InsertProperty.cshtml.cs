@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Infrastructure.Models;
 using System.IO;
+using System.Linq;
 
 namespace CBTDWeb.Pages.Property
 {
@@ -30,14 +31,14 @@ namespace CBTDWeb.Pages.Property
                 {
                     Text = a.Name,
                     Value = a.Id.ToString()
-                });
+                }).ToList(); // Ensure it's a list to avoid potential issues with lazy loading
 
             FeeTypes = _unitOfWork.FeeType.GetAll()
                 .Select(f => new SelectListItem
                 {
                     Text = f.Name,
                     Value = f.FeeTypeId.ToString()
-                });
+                }).ToList(); // Same as above
 
             if (id == null || id == 0)
             {
@@ -59,59 +60,53 @@ namespace CBTDWeb.Pages.Property
             }
         }
 
+
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
             string webRootPath = _webHostEnvironment.WebRootPath;
             var files = HttpContext.Request.Form.Files;
 
-            if (Property.Id == 0)
+            if (files.Count > 0)
             {
-                if (files.Count > 0)
-                {
-                    string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(webRootPath, @"images\properties\");
-                    var extension = Path.GetExtension(files[0].FileName);
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(webRootPath, @"images\properties\");
+                var extension = Path.GetExtension(files[0].FileName);
 
-                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                    {
-                        files[0].CopyTo(fileStream);
-                    }
-                    Property.MediaItems.First().UrlPath = @"\images\properties\" + fileName + extension;
+                using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                {
+                    files[0].CopyTo(fileStream);
                 }
 
+                // Ensure the MediaItems list is initialized and has at least one item
+                if (Property.MediaItems == null || Property.MediaItems.Count == 0)
+                {
+                    Property.MediaItems = new List<Media>
+                    {
+                        new Media { UrlPath = @"\images\properties\" + fileName + extension }
+                    };
+                }
+                else
+                {
+                    Property.MediaItems.First().UrlPath = @"\images\properties\" + fileName + extension;
+                }
+            }
+
+            if (Property.Id == 0)
+            {
                 _unitOfWork.Property.Add(Property);
             }
             else
             {
                 var objFromDb = _unitOfWork.Property.Get(p => p.Id == Property.Id);
-
-                if (files.Count > 0)
+                if (objFromDb != null)
                 {
-                    string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(webRootPath, @"images\properties\");
-                    var extension = Path.GetExtension(files[0].FileName);
-
-                    if (Property.MediaItems.First().UrlPath != null)
-                    {
-                        var imagePath = Path.Combine(webRootPath, objFromDb.MediaItems.First().UrlPath.TrimStart('\\'));
-                        if (System.IO.File.Exists(imagePath))
-                        {
-                            System.IO.File.Delete(imagePath);
-                        }
-                    }
-
-                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                    {
-                        files[0].CopyTo(fileStream);
-                    }
-                    Property.MediaItems.First().UrlPath = @"\images\properties\" + fileName + extension;
+                    _unitOfWork.Property.Update(Property);
                 }
-                else
-                {
-                    Property.MediaItems.First().UrlPath = objFromDb.MediaItems.First().UrlPath;
-                }
-
-                _unitOfWork.Property.Update(Property);
             }
 
             _unitOfWork.Commit();

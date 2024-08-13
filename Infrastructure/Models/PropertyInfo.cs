@@ -7,7 +7,7 @@ namespace Infrastructure.Models
     public class PropertyInfo
     {
         public int Id { get; set; }
-        
+
         public string PropertyName { get; set; }
 
         [Required]
@@ -19,7 +19,7 @@ namespace Infrastructure.Models
 
         [Required]
         public string Description { get; set; }
-        
+
         [Required]
         public string OwnerId { get; set; }
 
@@ -32,8 +32,9 @@ namespace Infrastructure.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        public IEnumerable<Amenity>? Amenities { get; set; }
-        public IEnumerable<Media>? MediaItems { get; set; }
-        public IEnumerable<Prices>? Prices { get; set; }
+        // Changed IEnumerable to List to allow adding items
+        public List<Amenity>? Amenities { get; set; } = new List<Amenity>();
+        public List<Media>? MediaItems { get; set; } = new List<Media>();
+        public List<Prices>? Prices { get; set; } = new List<Prices>();
     }
 }
