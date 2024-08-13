@@ -11,7 +11,7 @@ namespace Infrastructure.Models
         public int PropertyId { get; set; }
 
         [ForeignKey("PropertyId")]
-        public Property Property { get; set; }
+        public PropertyInfo PropertyInfo { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

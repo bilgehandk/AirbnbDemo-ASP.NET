@@ -78,10 +78,11 @@ namespace DataAccess.DbInitializer
             _db.SaveChanges();
 
             // Add properties
-            var properties = new List<Property>
+            var properties = new List<PropertyInfo>
             {
-                new Property
+                new PropertyInfo
                 {
+                    PropertyName = "Summer Apartment",
                     PropertyType = "Apartment",
                     TotalOccupancy = 4,
                     TotalBedrooms = 2,

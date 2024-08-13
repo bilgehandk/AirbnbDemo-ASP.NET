@@ -4,9 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Infrastructure.Models
 {
-    public class Property
+    public class PropertyInfo
     {
         public int Id { get; set; }
+        
+        public string PropertyName { get; set; }
 
         [Required]
         public string PropertyType { get; set; }

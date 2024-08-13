@@ -10,7 +10,7 @@ namespace Infrastructure.Models
 
         [ForeignKey("Property")]
         public int PropertyId { get; set; }
-        public Property Property { get; set; }
+        public PropertyInfo PropertyInfo { get; set; }
 
         [Required]
         public float FeeAmount { get; set; }

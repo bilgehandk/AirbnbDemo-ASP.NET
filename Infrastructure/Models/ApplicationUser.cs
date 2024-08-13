@@ -33,7 +33,7 @@ namespace Infrastructure.Models
         [Required]
         public string ProfileImage { get; set; }
 
-        public IEnumerable<Property>? Properties { get; set; }
+        public IEnumerable<PropertyInfo>? Properties { get; set; }
         public IEnumerable<Reservation>? Reservations { get; set; }
     }
 }

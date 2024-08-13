@@ -6,7 +6,7 @@ namespace Infrastructure.Interfaces
     {
         //ADD Models/Tables here as you create them so UnitOfWork will have access
         public IGenericRepository<ApplicationUser> ApplicationUser { get; }
-        public IGenericRepository<Property> Room { get; }
+        public IGenericRepository<PropertyInfo> Room { get; }
         public IGenericRepository<Reservation> Reservations { get; }
         public IGenericRepository<Review> Reviews { get; }
         public IGenericRepository<Media> Media { get; }
