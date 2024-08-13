@@ -36,3 +36,16 @@
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/refint/Utility.dll
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.pdb
 /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/ref/Utility.dll
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/bin/Debug/net8.0/Utility.deps.json
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/bin/Debug/net8.0/Utility.dll
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/bin/Debug/net8.0/Utility.pdb
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.csproj.AssemblyReference.cache
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.AssemblyInfoInputs.cache
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.AssemblyInfo.cs
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.csproj.CoreCompileInputs.cache
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.sourcelink.json
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.dll
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/refint/Utility.dll
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/Utility.pdb
+/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/Debug/net8.0/ref/Utility.dll

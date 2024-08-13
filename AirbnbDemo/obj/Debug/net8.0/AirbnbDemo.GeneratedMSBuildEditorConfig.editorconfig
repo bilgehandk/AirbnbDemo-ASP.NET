@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CBTDWeb
 build_property.RootNamespace = CBTDWeb
-build_property.ProjectDir = /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/
+build_property.ProjectDir = /Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo
+build_property.MSBuildProjectDirectory = /Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Error.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Index.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Privacy.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_LoginPartial.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/_ViewImports.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/_ViewStart.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_Layout.cshtml]
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-56a16jtx9o

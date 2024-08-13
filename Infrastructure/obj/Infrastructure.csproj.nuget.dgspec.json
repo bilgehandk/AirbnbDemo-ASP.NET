@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {}
+    "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
+    "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
-        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/obj/",
+        "projectPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/bmathews42/.nuget/packages/",
+        "outputPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
+          "/Users/bmathews42/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
