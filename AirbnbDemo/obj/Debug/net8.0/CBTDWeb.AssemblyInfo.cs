@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CBTDWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffb0c2e764f9a434a77e981bb1f5f1b9564fc66b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CBTDWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CBTDWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
