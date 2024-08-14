@@ -9,13 +9,9 @@ namespace Infrastructure.Interfaces
         public IGenericRepository<PropertyInfo> Property { get; }
         public IGenericRepository<Reservation> Reservations { get; }
         public IGenericRepository<Review> Reviews { get; }
-        public IGenericRepository<Media> Media { get; }
-        public IGenericRepository<AmenityType> AmenityType { get; }
         public IGenericRepository<Amenity> Ammenity { get; }
-        public IGenericRepository<Calenderavailability> CalenderAvaliablity { get; }
+        public IGenericRepository<CalenderAvailability> CalenderAvaliablity { get; }
         public IGenericRepository<Fee> Fee { get; }
-        public IGenericRepository<FeeType> FeeType { get; }
-        public IGenericRepository<Prices> Prices { get; }
         public IGenericRepository<ReservationStatus> ReservationStatus { get; }
 
         //save changes to the data source

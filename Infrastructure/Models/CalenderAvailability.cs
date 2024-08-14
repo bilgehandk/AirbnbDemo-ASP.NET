@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
-    public class Calenderavailability
+    public class CalenderAvailability
     {
         [Key]
         public int CalenderId { get; set; }

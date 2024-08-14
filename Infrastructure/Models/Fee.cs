@@ -6,17 +6,13 @@ namespace Infrastructure.Models
     public class Fee
     {
         [Key]
-        public int Property_Id { get; set; }
-
-        [ForeignKey("Property")]
-        public int PropertyId { get; set; }
-        public PropertyInfo PropertyInfo { get; set; }
-
+        public int Id { get; set; }
+        
         [Required]
         public float FeeAmount { get; set; }
+        
+        [Required]
+        public string Name { get; set; }
 
-        [ForeignKey("FeeType")]
-        public int FeeTypeId { get; set; }
-        public FeeType FeeType { get; set; }
     }
 }

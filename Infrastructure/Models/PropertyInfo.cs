@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
@@ -34,11 +35,30 @@ namespace Infrastructure.Models
         
         public string ImageUrl { get; set; }
         public string SecondImageUrl { get; set; }
+        
+        public double Prices { get; set; }
 
-        // Changed IEnumerable to List to allow adding items
-        public List<Amenity>? Amenities { get; set; } = new List<Amenity>();
-        public List<Fee>? Fees { get; set; } = new List<Fee>();
+        [Required]
+        [Display(Name = "Amenity")]
+        public int AmenityId { get; set; }
+        [Required]
+        [Display(Name = "Fee")]
+        public int FeeId { get; set; }
+        [Required]
+        [Display(Name = "CalenderAvailability")]
+        public int CalenderAvailabilityId { get; set; }
 
-        public List<Prices>? Prices { get; set; } = new List<Prices>();
+        /// <summary>
+        /// These are the two other objects I'm relating, linking the PK to the FK
+        /// </summary>
+
+        [ForeignKey("AmenityId")]
+        public Amenity? Amenity { get; set; }
+
+        [ForeignKey("FeeId")]
+        public Fee? Fee { get; set; }
+        
+        [ForeignKey("CalenderAvailabilityId")]
+        public CalenderAvailability? CalenderAvailability { get; set; }
     }
 }
