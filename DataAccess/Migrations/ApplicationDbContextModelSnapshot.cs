@@ -293,6 +293,10 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("LastUpdated")
                         .HasColumnType("datetime2");
 
@@ -311,6 +315,10 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PropertyType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecondImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -720,7 +728,7 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany()
+                        .WithMany("Fees")
                         .HasForeignKey("PropertyInfoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -733,7 +741,7 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Infrastructure.Models.Media", b =>
                 {
                     b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany("MediaItems")
+                        .WithMany()
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -884,7 +892,7 @@ namespace DataAccess.Migrations
                 {
                     b.Navigation("Amenities");
 
-                    b.Navigation("MediaItems");
+                    b.Navigation("Fees");
 
                     b.Navigation("Prices");
                 });
