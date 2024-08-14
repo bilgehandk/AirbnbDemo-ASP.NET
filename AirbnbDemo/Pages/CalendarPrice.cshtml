@@ -7,27 +7,16 @@
 <form method="Post" asp-page="Index">
     <div class="row mb-4">
         <div class="col-md-4">
+            <input asp-for="@Model.objAvailable.PropertyId" type="hidden" />
             <div class="form-group">
-                <label >Start Date</label>
-                <input type="date" id="startDate" class="form-control"/>
+                <label asp-for="@Model.objAvailable.StartDate">Start Date</label>
+                <input asp-for="@Model.objAvailable.StartDate" type="date" id="startDate" class="form-control"/>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label>End Date</label>
-                <input type="date" id="endDate" class="form-control"/>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label>Enter amount:</label>
-                <input
-                    type="number"
-                    id="amount"
-                    step="0.01"
-                    min="0"
-                    placeholder="0.00"
-                    aria-label="Amount in dollars">
+                <label asp-for="@Model.objAvailable.EndDate">End Date</label>
+                <input asp-for="@Model.objAvailable.EndDate" type="date" id="endDate" class="form-control"/>
             </div>
         </div>
         <div class="col-md-4 d-flex align-items-end">

@@ -186,6 +186,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FsZW5kYXJQcmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvY2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
