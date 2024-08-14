@@ -8,19 +8,19 @@ public class CalendarPrice : PageModel
 {
     private readonly UnitOfWork _unitOfWork;
     
-    [BindProperty]  //synchronizes form fields with values in code behind
-    public Prices objPrice { get; set; }
+    //[BindProperty]  //synchronizes form fields with values in code behind
+    //public Prices objPrice { get; set; }
 
     public CalendarPrice(UnitOfWork unitOfWork) // dependency injection
     {
         _unitOfWork = unitOfWork;
-        objPrice = new Prices();
+        //objPrice = new Prices();
     }
     
     public void OnGet(int Propertyid)
     {
         //objPrice.PropertyId = Propertyid;
-        objPrice.PropertyId = 1;
+        //objPrice.PropertyId = 1;
     }
     
     public IActionResult OnPost()
@@ -31,7 +31,7 @@ public class CalendarPrice : PageModel
         }
 
 
-        _unitOfWork.Prices.Add(objPrice);
+        //_unitOfWork.Prices.Add(objPrice);
         TempData["success"] = "Category added Successfully";
 
 

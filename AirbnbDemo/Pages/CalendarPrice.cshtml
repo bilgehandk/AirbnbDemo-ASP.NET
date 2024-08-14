@@ -5,25 +5,23 @@
 }
 
 <form method="Post" asp-page="Index">
-    <input type="hidden" asp-for="objPrice.PropertyId"/>
     <div class="row mb-4">
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="objPrice.StartDate">Start Date</label>
-                <input asp-for="objPrice.StartDate" type="date" id="startDate" class="form-control"/>
+                <label >Start Date</label>
+                <input type="date" id="startDate" class="form-control"/>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="objPrice.EndDate">End Date</label>
-                <input asp-for="objPrice.EndDate" type="date" id="endDate" class="form-control"/>
+                <label>End Date</label>
+                <input type="date" id="endDate" class="form-control"/>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="objPrice.Amount">Enter amount:</label>
+                <label>Enter amount:</label>
                 <input
-                    asp-for="objPrice.Amount"
                     type="number"
                     id="amount"
                     step="0.01"

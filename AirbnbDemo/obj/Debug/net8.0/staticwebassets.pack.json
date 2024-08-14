@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/images/PlaceHolderImage.jpg"
     },
     {
+      "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/330cc2ad-ea30-4e95-8ee6-854077740756.jpg",
+      "PackagePath": "staticwebassets/images/products/330cc2ad-ea30-4e95-8ee6-854077740756.jpg"
+    },
+    {
       "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/45b2cbcf-98e1-4556-b730-49ac288657f4.jpg",
       "PackagePath": "staticwebassets/images/products/45b2cbcf-98e1-4556-b730-49ac288657f4.jpg"
     },
@@ -63,6 +67,14 @@
     {
       "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/ZeroWater.jpg",
       "PackagePath": "staticwebassets/images/products/ZeroWater.jpg"
+    },
+    {
+      "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/p1_kitchen.webp",
+      "PackagePath": "staticwebassets/images/products/p1_kitchen.webp"
+    },
+    {
+      "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/p1_living.webp",
+      "PackagePath": "staticwebassets/images/products/p1_living.webp"
     },
     {
       "Id": "/Users/bmathews42/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/js/site.js",
