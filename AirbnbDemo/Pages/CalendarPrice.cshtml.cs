@@ -19,7 +19,8 @@ public class CalendarPrice : PageModel
     
     public void OnGet(int Propertyid)
     {
-        objPrice.PropertyId = Propertyid;
+        //objPrice.PropertyId = Propertyid;
+        objPrice.PropertyId = 1;
     }
     
     public IActionResult OnPost()
