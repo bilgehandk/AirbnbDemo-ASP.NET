@@ -198,6 +198,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvcGVydHkvSW5zZXJ0UHJvcGVydHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/PropertyDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvcGVydHlEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

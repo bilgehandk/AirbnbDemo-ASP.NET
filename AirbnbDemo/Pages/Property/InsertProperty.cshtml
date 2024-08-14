@@ -1,227 +1,124 @@
 @page
 @model CBTDWeb.Pages.Property.InsertPropertyModel
 @{
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-black pt-4 pb-3 text-center">
+        <h2 class="text-white py-2">@(Model.Property.Id == 0 ? "Create Property" : "Edit Property")</h2>
+    </div>
+    <div class="card-body p-5">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group row mb-4">
+                <div class="col-md-4">
+                    <label asp-for="Property.PropertyName"></label>
+                    <input asp-for="Property.PropertyName" class="form-control" />
+                    <span asp-validation-for="Property.PropertyName" class="text-danger"></span>
+                </div>
 
-        <div class="card shadow border-0 mt-4">
+                <div class="col-md-4">
+                    <label asp-for="Property.Address"></label>
+                    <input asp-for="Property.Address" class="form-control" />
+                    <span asp-validation-for="Property.Address" class="text-danger"></span>
+                </div>
 
-            <div class="card-header bg-black pt-4 pb-3 text-center">
-
-                <h2 class="text-white py-2">@(Model.Property.Id == 0 ? "Create" : "Edit") Product</h2>
-
+                <div class="col-md-4">
+                    <label asp-for="Property.City"></label>
+                    <input asp-for="Property.City" class="form-control" />
+                    <span asp-validation-for="Property.City" class="text-danger"></span>
+                </div>
             </div>
 
-            <div class="card-body p-4">
-
-                <form method="post" onsubmit="return ValidateInput()" enctype="multipart/form-data" class="border p-3">
-
-                    <div class="row">
-
-                        <div class="mb-3">
-
-                            <label asp-for="@Model.Property.PropertyName" class="ms-2"></label>
-
-                            <input id="txtName" asp-for="@Model.Property.PropertyName" class="form-control" />
-
-                            <span asp-validation-for="@Model.Property.PropertyName" class="text-danger"></span>
-
-                        </div>
-
-                        <div class="mb-3">
-
-                            <label asp-for="@Model.Property.Description" class="ms-2"></label>
-
-                            <textarea id="txtDesc" asp-for="@Model.Property.Description" class="form-control" rows="3"></textarea>
-
-                            <span asp-validation-for="@Model.Property.Description" class="text-danger"></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="row pt-2">
-
-                        <div class="col-6">
-
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.TotalOccupancy" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.TotalOccupancy" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.TotalOccupancy" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.TotalBedrooms" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.TotalBedrooms" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.TotalBedrooms" class="text-danger"></span>
-
-                            </div>
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.TotalBathrooms" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.TotalBathrooms" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.TotalBathrooms" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label class="ms-2">Amenity</label>
-
-                                @Html.DropDownListFor(c =>
-
-                                 c.Property.AmenityId,
-
-                                 Model.Amenity,
-
-                                 "",
-
-                                 new { @class = "form-select" }
-
-                                 )
-
-                                <span asp-validation-for="@Model.Property.Amenity" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label class="ms-2">Fee"></label>
-
-                                @Html.DropDownListFor(t =>
-
-                                 t.Property.FeeId,
-
-                                 Model.Fee,
-
-                                 "",
-
-                                 new { @class = "form-select" }
-
-                                 )
-
-                                <span asp-validation-for="@Model.Property.Fee" class="text-danger"></span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-6">
-
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.Address" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.Address" step="0.01" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.Address" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.City" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.City" step="0.01" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.City" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label asp-for="@Model.Property.State" class="ms-2"></label>
-
-                                <input asp-for="@Model.Property.State" step="0.01" class="form-control" />
-
-                                <span asp-validation-for="@Model.Property.State" class="text-danger"></span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="row pt-2">
-
-                        <div class="mb-3">
-
-                            <label for="" class="form-label">@(Model.Property.ImageUrl != null ? "Replace " : "")Picture</label>
-
-                            <input class="form-control" type="file" asp-for="@Model.Property.ImageUrl">
-
-                            <span class="text-danger" asp-validation-for="@Model.Property.ImageUrl"></span>
-
-                        </div>
-
-                        <div class="mb-3">
-
-                            @if (Model.Property.ImageUrl != null)
-
-                        {
-
-                                <input class="visually-hidden" type="hidden" asp-for="@Model.Property.ImageUrl" />
-
-                                <div class="col-4">
-
-                                    <div class="mt-1 form-text">Current picture</div>
-
-                                    <img class="img-thumbnail" src="@Model.Property.ImageUrl" />
-
-                                </div>
-
-                        }
-
-                        </div>
-
-                    </div>
-
-                    <div class="row pt-2">
-
-                        <div class="col-6 col-md-3">
-
-                            @if (Model.Property.Id != 0)
-
-                        {
-
-                                <input asp-for="@Model.Property.Id" type="hidden" />
-
-                        }
-
-
-
-                            <button type="submit" class="btn btn-primary form-control">@(Model.Property.Id == 0 ? "Create" : "Update")</button>
-
-                        </div>
-
-                        <div class="col-6 col-md-3">
-
-                            <a asp-page="Index" class="btn btn-outline-primary border form-control">
-
-                                Back to List
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </form>
-
+            <div class="form-group row mb-4">
+                <div class="col-md-4">
+                    <label asp-for="Property.State"></label>
+                    <input asp-for="Property.State" class="form-control" />
+                    <span asp-validation-for="Property.State" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Property.PropertyType"></label>
+                    <input asp-for="Property.PropertyType" class="form-control" />
+                    <span asp-validation-for="Property.PropertyType" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Property.TotalOccupancy"></label>
+                    <input asp-for="Property.TotalOccupancy" class="form-control" />
+                    <span asp-validation-for="Property.TotalOccupancy" class="text-danger"></span>
+                </div>
             </div>
 
-        </div>
+            <div class="form-group row mb-4">
+                <div class="col-md-4">
+                    <label asp-for="Property.TotalBedrooms"></label>
+                    <input asp-for="Property.TotalBedrooms" class="form-control" />
+                    <span asp-validation-for="Property.TotalBedrooms" class="text-danger"></span>
+                </div>
 
+                <div class="col-md-4">
+                    <label asp-for="Property.TotalBathrooms"></label>
+                    <input asp-for="Property.TotalBathrooms" class="form-control" />
+                    <span asp-validation-for="Property.TotalBathrooms" class="text-danger"></span>
+                </div>
 
+                <div class="col-md-4">
+                    <label asp-for="Property.Prices"></label>
+                    <input asp-for="Property.Prices" class="form-control" />
+                    <span asp-validation-for="Property.Prices" class="text-danger"></span>
+                </div>
+            </div>
 
+            <div class="form-group row mb-4">
+                <div class="col-md-6">
+                    <label asp-for="CalenderAvailability.StartDate">Start Date</label>
+                    <input asp-for="CalenderAvailability.StartDate" class="form-control" type="date" />
+                    <span asp-validation-for="CalenderAvailability.StartDate" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="CalenderAvailability.EndDate">End Date</label>
+                    <input asp-for="CalenderAvailability.EndDate" class="form-control" type="date" />
+                    <span asp-validation-for="CalenderAvailability.EndDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <div class="col-md-6">
+                    <label asp-for="Property.ImageUrl"></label>
+                    <input asp-for="Property.ImageUrl" type="file" class="form-control-file" />
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Property.SecondImageUrl"></label>
+                    <input asp-for="Property.SecondImageUrl" type="file" class="form-control-file" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <div class="col-md-4">
+                    <label asp-for="Property.Description"></label>
+                    <textarea asp-for="Property.Description" rows="5" class="form-control"></textarea>
+                    <span asp-validation-for="Property.Description" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Property.AmenityId">Amenity</label>
+                    <select asp-for="Property.AmenityId" class="form-control" asp-items="Model.Amenity"></select>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Property.FeeId">Fee</label>
+                    <select asp-for="Property.FeeId" class="form-control" asp-items="Model.Fee"></select>
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">
+                        @(Model.Property.Id == 0 ? "Create" : "Update")
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 }
-
-
-        

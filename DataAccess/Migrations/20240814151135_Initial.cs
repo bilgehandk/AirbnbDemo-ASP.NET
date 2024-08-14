@@ -72,21 +72,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CalenderAvailability",
-                columns: table => new
-                {
-                    CalenderId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PropertyId = table.Column<int>(type: "int", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CalenderAvailability", x => x.CalenderId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Fee",
                 columns: table => new
                 {
@@ -278,7 +263,6 @@ namespace DataAccess.Migrations
                     Prices = table.Column<double>(type: "float", nullable: false),
                     AmenityId = table.Column<int>(type: "int", nullable: false),
                     FeeId = table.Column<int>(type: "int", nullable: false),
-                    CalenderAvailabilityId = table.Column<int>(type: "int", nullable: false),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -296,15 +280,30 @@ namespace DataAccess.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Property_CalenderAvailability_CalenderAvailabilityId",
-                        column: x => x.CalenderAvailabilityId,
-                        principalTable: "CalenderAvailability",
-                        principalColumn: "CalenderId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_Property_Fee_FeeId",
                         column: x => x.FeeId,
                         principalTable: "Fee",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CalenderAvailability",
+                columns: table => new
+                {
+                    CalenderId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CalenderAvailability", x => x.CalenderId);
+                    table.ForeignKey(
+                        name: "FK_CalenderAvailability_Property_PropertyId",
+                        column: x => x.PropertyId,
+                        principalTable: "Property",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -433,6 +432,11 @@ namespace DataAccess.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CalenderAvailability_PropertyId",
+                table: "CalenderAvailability",
+                column: "PropertyId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OrderHeaders_ApplicationUserId",
                 table: "OrderHeaders",
                 column: "ApplicationUserId");
@@ -446,12 +450,6 @@ namespace DataAccess.Migrations
                 name: "IX_Property_ApplicationUserId",
                 table: "Property",
                 column: "ApplicationUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Property_CalenderAvailabilityId",
-                table: "Property",
-                column: "CalenderAvailabilityId",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Property_FeeId",
@@ -508,6 +506,9 @@ namespace DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "CalenderAvailability");
+
+            migrationBuilder.DropTable(
                 name: "OrderHeaders");
 
             migrationBuilder.DropTable(
@@ -533,9 +534,6 @@ namespace DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "CalenderAvailability");
 
             migrationBuilder.DropTable(
                 name: "Fee");
