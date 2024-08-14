@@ -67,15 +67,7 @@ namespace DataAccess.DbInitializer
             _userManager.AddToRoleAsync(user, SD.AdminRole).GetAwaiter().GetResult();
 
             _db.SaveChanges();
-
-            // Add FeeTypes
-            var feeTypes = new List<FeeType>
-            {
-                new FeeType { Name = "Cleaning Fee", Description = "Fee for cleaning the property after checkout." },
-                new FeeType { Name = "Service Fee", Description = "Service fee for handling the reservation." }
-            };
-            _db.FeeType.AddRange(feeTypes);
-            _db.SaveChanges();
+            
 
             // Add properties
             var properties = new List<PropertyInfo>
@@ -101,9 +93,9 @@ namespace DataAccess.DbInitializer
             _db.SaveChanges();
 
             // Add CalendarAvailability
-            var calendarAvailabilities = new List<Calenderavailability>
+            var calendarAvailabilities = new List<CalenderAvailability>
             {
-                new Calenderavailability
+                new CalenderAvailability
                 {
                     PropertyId = properties.First().Id,
                     StartDate = DateTime.Now.AddDays(20),
@@ -113,39 +105,21 @@ namespace DataAccess.DbInitializer
             _db.CalenderAvailability.AddRange(calendarAvailabilities);
             _db.SaveChanges();
 
-            // Add AmenityTypes
-            var amenityTypes = new List<AmenityType>
-            {
-                new AmenityType { Name = "WiFi" },
-                new AmenityType { Name = "Air Conditioning" }
-            };
-            _db.AmenityType.AddRange(amenityTypes);
-            _db.SaveChanges();
 
             // Add Amenities
             var amenities = new List<Amenity>
             {
                 new Amenity
                 {
-                    PropertyId = properties.First().Id,
-                    AmenityTypeId = amenityTypes.First().Id
+                    Id = 1,
+                    Name = "Balcony"
+                },new Amenity
+                {
+                    Id = 2,
+                    Name = "Car Parking"
                 }
             };
             _db.Amenity.AddRange(amenities);
-            _db.SaveChanges();
-
-            // Add Prices
-            var prices = new List<Prices>
-            {
-                new Prices
-                {
-                    PropertyId = properties.First().Id,
-                    StartDate = DateTime.Now.AddDays(5),
-                    EndDate = DateTime.Now.AddDays(10),
-                    Amount = 150
-                }
-            };
-            _db.Prices.AddRange(prices);
             _db.SaveChanges();
 
             // Add Fees
@@ -153,9 +127,14 @@ namespace DataAccess.DbInitializer
             {
                 new Fee
                 {
-                    PropertyId = properties.First().Id,
-                    FeeAmount = 50,
-                    FeeTypeId = feeTypes.First().FeeTypeId
+                    Id = 1,
+                    FeeAmount = 100,
+                    Name = "Cleaning Room"
+                },new Fee
+                {
+                    Id = 2,
+                    FeeAmount = 40,
+                    Name = "Washing Clothes"
                 }
             };
             _db.Fee.AddRange(fees);
@@ -199,19 +178,7 @@ namespace DataAccess.DbInitializer
             };
             _db.Reviews.AddRange(reviews);
             _db.SaveChanges();
-
-            // Add Media
-            var mediaItems = new List<Media>
-            {
-                new Media
-                {
-                    Id = 1,
-                    UrlPath = "room1.jpg",
-                    IsMainImage = true
-                }
-            };
-            _db.Media.AddRange(mediaItems);
-            _db.SaveChanges();
+            
         }
     }
 }

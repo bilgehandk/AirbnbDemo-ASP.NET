@@ -13,8 +13,8 @@ namespace CBTDWeb.Pages.Property
         [BindProperty]
         public PropertyInfo Property { get; set; }
 
-        public IEnumerable<SelectListItem> FeeType { get; set; }
-        public IEnumerable<SelectListItem> AmenityType { get; set; }
+        public IEnumerable<SelectListItem> Amenity { get; set; }
+        public IEnumerable<SelectListItem> Fee { get; set; }
 
         private readonly IWebHostEnvironment _webHostEnvironment;
         //helps us map the physical path to the wwwroot folder on the server amongst other things
@@ -24,21 +24,21 @@ namespace CBTDWeb.Pages.Property
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
             Property = new PropertyInfo();
-            FeeType = new List<SelectListItem>();
-            AmenityType = new List<SelectListItem>();
+            Amenity = new List<SelectListItem>();
+            Fee = new List<SelectListItem>();
         }
 
         public IActionResult OnGet(int? id)
         {
             Property = new PropertyInfo();
-            FeeType = _unitOfWork.FeeType.GetAll()
+            Amenity = _unitOfWork.Ammenity.GetAll()
                 .Select(c => new SelectListItem
                 {
                     Text = c.Name,
-                    Value = c.FeeTypeId.ToString()
+                    Value = c.Id.ToString()
                 }
                 );
-            AmenityType = _unitOfWork.AmenityType.GetAll()
+            Fee = _unitOfWork.Fee.GetAll()
                 .Select(m => new SelectListItem
                 {
                     Text = m.Name,
@@ -67,113 +67,90 @@ namespace CBTDWeb.Pages.Property
         
         
         
-       public IActionResult OnPost()
+        public IActionResult OnPost()
+{
+    string webRootPath = _webHostEnvironment.WebRootPath;
+    var files = HttpContext.Request.Form.Files;
+
+    // Define the relative path to the images folder
+    var uploadsFolder = Path.Combine(webRootPath, "images", "products");
+
+    // Ensure the uploads folder exists
+    if (!Directory.Exists(uploadsFolder))
+    {
+        Directory.CreateDirectory(uploadsFolder);
+    }
+
+    // Check if the product is new (create)
+    if (Property.Id == 0)
+    {
+        if (files.Count > 0)
         {
-            string webRootPath = _webHostEnvironment.WebRootPath;
-            //Form.Files[] array enctype="multipart/form-data"
-            var files = HttpContext.Request.Form.Files;
+            string fileName = Guid.NewGuid().ToString();
+            var extension = Path.GetExtension(files[0].FileName);
+            var fullPath = Path.Combine(uploadsFolder, fileName + extension);
 
-            // Check if the product is new (create)
-            if (Property.Id == 0)
+            // Save the uploaded image to the server
+            using (var fileStream = new FileStream(fullPath, FileMode.Create))
             {
-                // Check if an image was uploaded
-                if (files.Count > 0)
-                {
-                    // Generate a unique identifier for the image name
-                    string fileName = Guid.NewGuid().ToString();
-
-                    // Define the path to store the uploaded image
-                    var uploads = Path.Combine(webRootPath, @"images\products\");
-
-                    // Get the file extension
-                    var extension = Path.GetExtension(files[0].FileName);
-
-                    // Create the full path for the uploaded image
-                    var fullPath = Path.Combine(uploads, fileName + extension);
-
-                    // Save the uploaded image to the server
-                    using var fileStream = System.IO.File.Create(fullPath);
-                    files[0].CopyTo(fileStream);
-
-                    // Set the URL path for the image in the database
-                    Property.SecondImageUrl = @"\images\products\" + fileName + extension;
-                    
-                    // Generate a unique identifier for the image name
-                    string filename2 = Guid.NewGuid().ToString();
-
-                    // Define the path to store the uploaded image
-                    var uploads2 = Path.Combine(webRootPath, @"images\products\");
-
-                    // Get the file extension
-                    var extension2 = Path.GetExtension(files[1].FileName);
-
-                    // Create the full path for the uploaded image
-                    var fullPath2 = Path.Combine(uploads2, filename2 + extension2);
-
-                    // Save the uploaded image to the server
-                    using var fileStream2 = System.IO.File.Create(fullPath2);
-                    files[1].CopyTo(fileStream2);
-
-                    // Set the URL path for the image in the database
-                    Property.ImageUrl = @"\images\products\" + filename2 + extension2;
-                }
-
-                // Add the new product to the database
-                _unitOfWork.Property.Add(Property);
-            }
-            else
-            {
-                // Retrieve the existing product from the database
-                var objProductFromDb = _unitOfWork.Property.Get(p => p.Id == Property.Id);
-
-                // Check if an image was uploaded
-                if (files.Count > 0)
-                {
-                    // Generate a unique identifier for the new image name
-                    string fileName = Guid.NewGuid().ToString();
-
-                    // Define the path to store the uploaded image
-                    var uploads = Path.Combine(webRootPath, @"images\products\");
-
-                    // Get the file extension
-                    var extension = Path.GetExtension(files[0].FileName);
-
-                    // Delete the existing image associated with the product
-                    if (objProductFromDb.ImageUrl != null)
-                    {
-                        var imagePath = Path.Combine(webRootPath, Property.ImageUrl.TrimStart('\\'));
-                        if (System.IO.File.Exists(imagePath))
-                        {
-                            System.IO.File.Delete(imagePath);
-                        }
-                    }
-
-                    // Create the full path for the new uploaded image
-                    var fullPath = Path.Combine(uploads, fileName + extension);
-
-                    // Save the new uploaded image to the server
-                    using var fileStream = System.IO.File.Create(fullPath);
-                    files[0].CopyTo(fileStream);
-
-                    // Set the URL path for the new image in the database
-                    Property.ImageUrl = @"\images\products\" + fileName + extension;
-                }
-                else
-                {
-                    // Update the existing product's image URL
-                    objProductFromDb.ImageUrl = Property.ImageUrl;
-                }
-
-                // Update the existing product in the database
-                _unitOfWork.Property.Update(Property);
+                files[0].CopyTo(fileStream);
             }
 
-            // Save changes to the database
-            _unitOfWork.Commit();
-
-            // Redirect to the Products Page
-            return RedirectToPage("./Index");
+            // Set the URL path for the image in the database
+            Property.ImageUrl = $"/images/products/{fileName}{extension}";
         }
+        
+        
+        // Add the new property to the database
+        _unitOfWork.Property.Add(Property);
+    }
+    else
+    {
+        // Retrieve the existing property from the database
+        var objProductFromDb = _unitOfWork.Property.Get(p => p.Id == Property.Id);
+
+        if (files.Count > 0)
+        {
+            string fileName = Guid.NewGuid().ToString();
+            var extension = Path.GetExtension(files[0].FileName);
+            var fullPath = Path.Combine(uploadsFolder, fileName + extension);
+
+            // Delete the existing image if a new one is uploaded
+            if (objProductFromDb.ImageUrl != null)
+            {
+                var imagePath = Path.Combine(webRootPath, objProductFromDb.ImageUrl.TrimStart('/'));
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            // Save the new uploaded image to the server
+            using (var fileStream = new FileStream(fullPath, FileMode.Create))
+            {
+                files[0].CopyTo(fileStream);
+            }
+
+            // Update the ImageUrl in the database
+            Property.ImageUrl = $"/images/products/{fileName}{extension}";
+        }
+        else
+        {
+            // Preserve the existing image URL if no new image is uploaded
+            Property.ImageUrl = objProductFromDb.ImageUrl;
+        }
+
+        // Update the existing property in the database
+        _unitOfWork.Property.Update(Property);
+    }
+
+    // Save changes to the database
+    _unitOfWork.Commit();
+
+    // Redirect to the Products Page
+    return RedirectToPage("./Index");
+}
+
 
 
     }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240814085258_AddingTheNewPropertyInfo")]
-    partial class AddingTheNewPropertyInfo
+    [Migration("20240814122044_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,39 +33,16 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AmenityTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AmenityTypeId");
-
-                    b.HasIndex("PropertyId");
-
-                    b.ToTable("Amenity");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.AmenityType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AmenityType");
+                    b.ToTable("Amenity");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Calenderavailability", b =>
+            modelBuilder.Entity("Infrastructure.Models.CalenderAvailability", b =>
                 {
                     b.Property<int>("CalenderId")
                         .ValueGeneratedOnAdd()
@@ -79,73 +56,15 @@ namespace DataAccess.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PropertyInfoId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("CalenderId");
 
-                    b.HasIndex("PropertyInfoId");
-
                     b.ToTable("CalenderAvailability");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Fee", b =>
-                {
-                    b.Property<int>("Property_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Property_Id"));
-
-                    b.Property<float>("FeeAmount")
-                        .HasColumnType("real");
-
-                    b.Property<int>("FeeTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PropertyInfoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Property_Id");
-
-                    b.HasIndex("FeeTypeId")
-                        .IsUnique();
-
-                    b.HasIndex("PropertyInfoId");
-
-                    b.ToTable("Fee");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.FeeType", b =>
-                {
-                    b.Property<int>("FeeTypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeeTypeId"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("FeeTypeId");
-
-                    b.ToTable("FeeType");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.Media", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -153,21 +72,16 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsMainImage")
-                        .HasColumnType("bit");
+                    b.Property<float>("FeeAmount")
+                        .HasColumnType("real");
 
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UrlPath")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PropertyId");
-
-                    b.ToTable("Media");
+                    b.ToTable("Fee");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.OrderHeader", b =>
@@ -246,33 +160,6 @@ namespace DataAccess.Migrations
                     b.ToTable("OrderHeaders");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Prices", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PropertyId");
-
-                    b.ToTable("Prices");
-                });
-
             modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
                 {
                     b.Property<int>("Id")
@@ -285,8 +172,14 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("AmenityId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CalenderAvailabilityId")
+                        .HasColumnType("int");
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -295,6 +188,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FeeId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -312,6 +208,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("OwnerId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Prices")
+                        .HasColumnType("float");
 
                     b.Property<string>("PropertyName")
                         .IsRequired()
@@ -340,7 +239,14 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AmenityId");
+
                     b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("CalenderAvailabilityId")
+                        .IsUnique();
+
+                    b.HasIndex("FeeId");
 
                     b.ToTable("Property");
                 });
@@ -692,66 +598,6 @@ namespace DataAccess.Migrations
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Amenity", b =>
-                {
-                    b.HasOne("Infrastructure.Models.AmenityType", "AmenityType")
-                        .WithMany()
-                        .HasForeignKey("AmenityTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany("Amenities")
-                        .HasForeignKey("PropertyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AmenityType");
-
-                    b.Navigation("PropertyInfo");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.Calenderavailability", b =>
-                {
-                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany()
-                        .HasForeignKey("PropertyInfoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("PropertyInfo");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.Fee", b =>
-                {
-                    b.HasOne("Infrastructure.Models.FeeType", "FeeType")
-                        .WithOne("Fee")
-                        .HasForeignKey("Infrastructure.Models.Fee", "FeeTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany("Fees")
-                        .HasForeignKey("PropertyInfoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FeeType");
-
-                    b.Navigation("PropertyInfo");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.Media", b =>
-                {
-                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany()
-                        .HasForeignKey("PropertyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("PropertyInfo");
-                });
-
             modelBuilder.Entity("Infrastructure.Models.OrderHeader", b =>
                 {
                     b.HasOne("Infrastructure.Models.ApplicationUser", "ApplicationUser")
@@ -761,22 +607,35 @@ namespace DataAccess.Migrations
                     b.Navigation("ApplicationUser");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Prices", b =>
+            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
                 {
-                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany("Prices")
-                        .HasForeignKey("PropertyId")
+                    b.HasOne("Infrastructure.Models.Amenity", "Amenity")
+                        .WithMany()
+                        .HasForeignKey("AmenityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("PropertyInfo");
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
-                {
                     b.HasOne("Infrastructure.Models.ApplicationUser", null)
                         .WithMany("Properties")
                         .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("Infrastructure.Models.CalenderAvailability", "CalenderAvailability")
+                        .WithOne("PropertyInfo")
+                        .HasForeignKey("Infrastructure.Models.PropertyInfo", "CalenderAvailabilityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.Models.Fee", "Fee")
+                        .WithMany()
+                        .HasForeignKey("FeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Amenity");
+
+                    b.Navigation("CalenderAvailability");
+
+                    b.Navigation("Fee");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Reservation", b =>
@@ -885,19 +744,10 @@ namespace DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.FeeType", b =>
+            modelBuilder.Entity("Infrastructure.Models.CalenderAvailability", b =>
                 {
-                    b.Navigation("Fee")
+                    b.Navigation("PropertyInfo")
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.PropertyInfo", b =>
-                {
-                    b.Navigation("Amenities");
-
-                    b.Navigation("Fees");
-
-                    b.Navigation("Prices");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.ApplicationUser", b =>

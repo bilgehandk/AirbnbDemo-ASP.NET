@@ -12,7 +12,7 @@ namespace DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AmenityType",
+                name: "Amenity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -21,7 +21,7 @@ namespace DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AmenityType", x => x.Id);
+                    table.PrimaryKey("PK_Amenity", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -72,17 +72,32 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FeeType",
+                name: "CalenderAvailability",
                 columns: table => new
                 {
-                    FeeTypeId = table.Column<int>(type: "int", nullable: false)
+                    CalenderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    PropertyId = table.Column<int>(type: "int", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FeeType", x => x.FeeTypeId);
+                    table.PrimaryKey("PK_CalenderAvailability", x => x.CalenderId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Fee",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FeeAmount = table.Column<float>(type: "real", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Fee", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -245,6 +260,7 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    PropertyName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PropertyType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TotalOccupancy = table.Column<int>(type: "int", nullable: false),
                     TotalBedrooms = table.Column<int>(type: "int", nullable: false),
@@ -257,131 +273,38 @@ namespace DataAccess.Migrations
                     LastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Latitude = table.Column<double>(type: "float", nullable: false),
                     Longitude = table.Column<double>(type: "float", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SecondImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Prices = table.Column<double>(type: "float", nullable: false),
+                    AmenityId = table.Column<int>(type: "int", nullable: false),
+                    FeeId = table.Column<int>(type: "int", nullable: false),
+                    CalenderAvailabilityId = table.Column<int>(type: "int", nullable: false),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Property", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_Property_Amenity_AmenityId",
+                        column: x => x.AmenityId,
+                        principalTable: "Amenity",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Property_AspNetUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Amenity",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AmenityTypeId = table.Column<int>(type: "int", nullable: false),
-                    PropertyId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Amenity", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Amenity_AmenityType_AmenityTypeId",
-                        column: x => x.AmenityTypeId,
-                        principalTable: "AmenityType",
-                        principalColumn: "Id",
+                        name: "FK_Property_CalenderAvailability_CalenderAvailabilityId",
+                        column: x => x.CalenderAvailabilityId,
+                        principalTable: "CalenderAvailability",
+                        principalColumn: "CalenderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Amenity_Property_PropertyId",
-                        column: x => x.PropertyId,
-                        principalTable: "Property",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CalenderAvailability",
-                columns: table => new
-                {
-                    CalenderId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PropertyId = table.Column<int>(type: "int", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CalenderAvailability", x => x.CalenderId);
-                    table.ForeignKey(
-                        name: "FK_CalenderAvailability_Property_PropertyId",
-                        column: x => x.PropertyId,
-                        principalTable: "Property",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Fee",
-                columns: table => new
-                {
-                    Property_Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PropertyId = table.Column<int>(type: "int", nullable: false),
-                    FeeAmount = table.Column<float>(type: "real", nullable: false),
-                    FeeTypeId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Fee", x => x.Property_Id);
-                    table.ForeignKey(
-                        name: "FK_Fee_FeeType_FeeTypeId",
-                        column: x => x.FeeTypeId,
-                        principalTable: "FeeType",
-                        principalColumn: "FeeTypeId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Fee_Property_PropertyId",
-                        column: x => x.PropertyId,
-                        principalTable: "Property",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Media",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UrlPath = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsMainImage = table.Column<bool>(type: "bit", nullable: false),
-                    PropertyId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Media", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Media_Property_PropertyId",
-                        column: x => x.PropertyId,
-                        principalTable: "Property",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Prices",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PropertyId = table.Column<int>(type: "int", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Amount = table.Column<double>(type: "float", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Prices", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Prices_Property_PropertyId",
-                        column: x => x.PropertyId,
-                        principalTable: "Property",
+                        name: "FK_Property_Fee_FeeId",
+                        column: x => x.FeeId,
+                        principalTable: "Fee",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -471,16 +394,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Amenity_AmenityTypeId",
-                table: "Amenity",
-                column: "AmenityTypeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Amenity_PropertyId",
-                table: "Amenity",
-                column: "PropertyId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -520,40 +433,30 @@ namespace DataAccess.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CalenderAvailability_PropertyId",
-                table: "CalenderAvailability",
-                column: "PropertyId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Fee_FeeTypeId",
-                table: "Fee",
-                column: "FeeTypeId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Fee_PropertyId",
-                table: "Fee",
-                column: "PropertyId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Media_PropertyId",
-                table: "Media",
-                column: "PropertyId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderHeaders_ApplicationUserId",
                 table: "OrderHeaders",
                 column: "ApplicationUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Prices_PropertyId",
-                table: "Prices",
-                column: "PropertyId");
+                name: "IX_Property_AmenityId",
+                table: "Property",
+                column: "AmenityId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Property_ApplicationUserId",
                 table: "Property",
                 column: "ApplicationUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Property_CalenderAvailabilityId",
+                table: "Property",
+                column: "CalenderAvailabilityId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Property_FeeId",
+                table: "Property",
+                column: "FeeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reservations_ApplicationUserId",
@@ -590,9 +493,6 @@ namespace DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Amenity");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -608,19 +508,7 @@ namespace DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "CalenderAvailability");
-
-            migrationBuilder.DropTable(
-                name: "Fee");
-
-            migrationBuilder.DropTable(
-                name: "Media");
-
-            migrationBuilder.DropTable(
                 name: "OrderHeaders");
-
-            migrationBuilder.DropTable(
-                name: "Prices");
 
             migrationBuilder.DropTable(
                 name: "Reviews");
@@ -629,13 +517,7 @@ namespace DataAccess.Migrations
                 name: "ShoppingCart");
 
             migrationBuilder.DropTable(
-                name: "AmenityType");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
-                name: "FeeType");
 
             migrationBuilder.DropTable(
                 name: "Reservations");
@@ -647,7 +529,16 @@ namespace DataAccess.Migrations
                 name: "ReservationStatus");
 
             migrationBuilder.DropTable(
+                name: "Amenity");
+
+            migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "CalenderAvailability");
+
+            migrationBuilder.DropTable(
+                name: "Fee");
         }
     }
 }

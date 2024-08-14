@@ -14,13 +14,9 @@ public class UnitOfWork : IUnitOfWork
     private IGenericRepository<PropertyInfo> _Property;
     private IGenericRepository<Review> _Reviews;
     private IGenericRepository<Reservation> _Reservations;
-    private IGenericRepository<Media> _Media;
-    private IGenericRepository<AmenityType> _AmenityType;
     private IGenericRepository<Amenity> _Ammenity;
-    private IGenericRepository<Calenderavailability> _CalenderAvaliability;
+    private IGenericRepository<CalenderAvailability> _CalenderAvaliability;
     private IGenericRepository<Fee> _Fee;
-    private IGenericRepository<FeeType> _FeeType;
-    private IGenericRepository<Prices> _Prices;
     private IGenericRepository<ReservationStatus> _ReservationStatus;
     
     public IGenericRepository<ApplicationUser> _ApplicationUser;
@@ -39,34 +35,6 @@ public class UnitOfWork : IUnitOfWork
         }
     }
     
-    public IGenericRepository<Prices> Prices
-    {
-        get
-        {
-
-            if (_Prices == null)
-            {
-                _Prices = new GenericRepository<Prices>(_dbContext);
-            }
-
-            return _Prices;
-        }
-    }
-    
-    public IGenericRepository<FeeType> FeeType
-    {
-        get
-        {
-
-            if (_FeeType == null)
-            {
-                _FeeType = new GenericRepository<FeeType>(_dbContext);
-            }
-
-            return _FeeType;
-        }
-    }
-    
     public IGenericRepository<Fee> Fee
     {
         get
@@ -81,30 +49,17 @@ public class UnitOfWork : IUnitOfWork
         }
     }
     
-    public IGenericRepository<Calenderavailability> CalenderAvaliablity
+    public IGenericRepository<CalenderAvailability> CalenderAvaliablity
     {
         get
         {
 
             if (_CalenderAvaliability == null)
             {
-                _CalenderAvaliability = new GenericRepository<Calenderavailability>(_dbContext);
+                _CalenderAvaliability = new GenericRepository<CalenderAvailability>(_dbContext);
             }
 
             return _CalenderAvaliability;
-        }
-    }
-
-    public IGenericRepository<AmenityType> AmenityType
-    {
-        get
-        {
-            if (_AmenityType == null)
-            {
-                _AmenityType = new GenericRepository<AmenityType>(_dbContext);
-            }
-
-            return _AmenityType;
         }
     }
 
@@ -178,19 +133,6 @@ public class UnitOfWork : IUnitOfWork
         }
     }
     
-    public IGenericRepository<Media> Media
-    {
-        get
-        {
-
-            if (_Media == null)
-            {
-                _Media = new GenericRepository<Media>(_dbContext);
-            }
-
-            return _Media;
-        }
-    }
 
     //ADD ADDITIONAL METHODS FOR EACH MODEL HERE
 

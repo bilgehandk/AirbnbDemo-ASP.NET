@@ -9,16 +9,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="564da072-45bc-41ca-84ba-b26c0101fada" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/dataSources/297272ef-2602-4153-8ca8-004677439309.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AirbnbDemo/wwwroot/images/products/330cc2ad-ea30-4e95-8ee6-854077740756.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AirbnbDemo/wwwroot/images/products/p1_kitchen.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AirbnbDemo/wwwroot/images/products/p1_living.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Utility.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Utility.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Utility.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/Utility.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/AirbnbDemo.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/ref/AirbnbDemo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/ref/AirbnbDemo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/refint/AirbnbDemo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/Debug/net8.0/refint/AirbnbDemo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/DbInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240812195051_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240812195051_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Migrations/20240814122044_Initial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240813073931_AddInsertproperty.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240813073931_AddInsertproperty.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240813081034_AddmigrationforProprety.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240813081034_AddmigrationforProprety.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240814072344_Addnewonefotmain.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Migrations/20240814122044_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240814072344_Addnewonefotmain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240814085258_AddingTheNewPropertyInfo.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20240814085258_AddingTheNewPropertyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net8.0/Infrastructure.dll" afterDir="false" />
@@ -34,7 +64,18 @@
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/DataAccess.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/DataAccess.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/ref/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/ref/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Interfaces/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/Amenity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/Amenity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/AmenityType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/CalenderAvaliablity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/CalenderAvailability.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/Fee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/Fee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/FeeType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/Media.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/Prices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/PropertyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/PropertyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/PropertyViewModel.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs" afterDir="false" />
@@ -45,6 +86,7 @@
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/bin/Debug/net8.0/Utility.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/bin/Debug/net8.0/Utility.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/bin/Debug/net8.0/Utility.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/bin/Debug/net8.0/Utility.pdb" afterDir="false" />
@@ -55,6 +97,7 @@
       <change beforePath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/Utility.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/Utility.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/ref/Utility.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/ref/Utility.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/refint/Utility.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/obj/Debug/net8.0/refint/Utility.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +111,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "bmathews42"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/bilgehandk/AirbnbDemo-ASP.NET.git",
+    "accountId": "104014b5-a9eb-4326-b4c4-ab782073d1b8"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/438ddfed5ed0473cad6a426693c8c1e4c6c00/f1/156a7a4b/SelectListItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e262e3807b340ebb756a8e16a60b31e12000/60/142a58e6/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
@@ -89,7 +144,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.AirbnbDemo: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "IndexMainPage",
+    "git-widget-placeholder": "Merging IndexMainPage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,6 +206,7 @@
       <updated>1723448807947</updated>
       <workItem from="1723448808991" duration="6764000" />
       <workItem from="1723476816617" duration="12612000" />
+      <workItem from="1723538612080" duration="14800000" />
     </task>
     <servers />
   </component>
