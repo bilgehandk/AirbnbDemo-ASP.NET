@@ -1,95 +1,238 @@
 @page
 @model CBTDWeb.Pages.Property.InsertPropertyModel
-@if (Model.AmenityTypes != null && Model.AmenityTypes.Any())
-{
-<select asp-for="Property.Amenities.First().AmenityType" asp-items="Model.AmenityTypes">
-    <option value="">-- Select Amenity Type --</option>
-</select>
-}
-else
-{
-<p>No Amenity Types available.</p>
-}
-
-@if (Model.FeeTypes != null && Model.FeeTypes.Any())
-{
-<select asp-for="FeeTypes.Any()" asp-items="Model.FeeTypes">
-    <option value="">-- Select Fee Type --</option>
-</select>
-}
-else
-{
-<p>No Fee Types available.</p>
-}
+@{
 
 <div class="card shadow border-0 mt-4">
+
     <div class="card-header bg-black pt-4 pb-3 text-center">
-        <h2 class="text-white py-2">@((Model.Property.Id == 0) ? "Create" : "Edit") Property</h2>
+
+        <h2 class="text-white py-2">@(Model.Property.Id == 0 ? "Create" : "Edit") Product</h2>
+
     </div>
 
     <div class="card-body p-4">
-        <form method="post" enctype="multipart/form-data" class="border p-3">
+
+        <form method="post" onsubmit="return ValidateInput()" enctype="multipart/form-data" class="border p-3">
+
             <div class="row">
-                <!-- Property Name -->
+
                 <div class="mb-3">
-                    <label asp-for="Property.PropertyName" class="ms-2"></label>
-                    <input asp-for="Property.PropertyName" class="form-control" />
-                    <span asp-validation-for="Property.PropertyName" class="text-danger"></span>
+
+                    <label asp-for="@Model.Property.PropertyName" class="ms-2"></label>
+
+                    <input id="txtName" asp-for="@Model.Property.PropertyName" class="form-control" />
+
+                    <span asp-validation-for="@Model.Property.PropertyName" class="text-danger"></span>
+
                 </div>
 
-                <!-- Description -->
                 <div class="mb-3">
-                    <label asp-for="Property.Description" class="ms-2"></label>
-                    <textarea asp-for="Property.Description" class="form-control" rows="3"></textarea>
-                    <span asp-validation-for="Property.Description" class="text-danger"></span>
+
+                    <label asp-for="@Model.Property.Description" class="ms-2"></label>
+
+                    <textarea id="txtDesc" asp-for="@Model.Property.Description" class="form-control" rows="3"></textarea>
+
+                    <span asp-validation-for="@Model.Property.Description" class="text-danger"></span>
+
                 </div>
 
-                <!-- Amenity Type -->
-                <div class="mb-3">
-                    <label asp-for="Property.Amenities.First().AmenityTypeId" class="ms-2">Amenity Type</label>
-                    <select asp-for="Property.Amenities.First().AmenityTypeId" asp-items="Model.AmenityTypes" class="form-select"></select>
-                    <span asp-validation-for="Property.Amenities.First().AmenityTypeId" class="text-danger"></span>
-                </div>
-
-                <!-- Price -->
-                <div class="mb-3">
-                    <label asp-for="Property.Prices.First().Amount" class="ms-2">Price</label>
-                    <input asp-for="Property.Prices.First().Amount" class="form-control" />
-                    <span asp-validation-for="Property.Prices.First().Amount" class="text-danger"></span>
-                </div>
-
-                <!-- Media Item (Image) -->
-                <div class="mb-3">
-                    <label for="Property.MediaItems.First().UrlPath" class="form-label">
-                        @(Model.Property.MediaItems.FirstOrDefault()?.UrlPath != null ? "Replace " : "") Picture
-                    </label>
-                    <input class="form-control" type="file" asp-for="Property.MediaItems.First().UrlPath">
-                    <span class="text-danger" asp-validation-for="Property.MediaItems.First().UrlPath"></span>
-
-                    @if (Model.Property.MediaItems.FirstOrDefault()?.UrlPath != null)
-                    {
-                    <input class="visually-hidden" type="hidden" asp-for="Property.MediaItems.First().UrlPath" />
-                    <div class="mt-2">
-                        <img class="img-thumbnail" src="@Model.Property.MediaItems.First().UrlPath" />
-                    </div>
-                    }
-                </div>
             </div>
 
-            <!-- Submit and Back Buttons -->
             <div class="row pt-2">
-                <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-primary form-control">
-                        @((Model.Property.Id == 0) ? "Create" : "Update")
-                    </button>
+
+                <div class="col-6">
+
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.PropertyType" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.PropertyType" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.PropertyType" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.TotalOccupancy" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.TotalOccupancy" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.TotalOccupancy" class="text-danger"></span>
+
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.TotalBedrooms" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.TotalBedrooms" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.TotalBedrooms" class="text-danger"></span>
+
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.TotalBathrooms" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.TotalBathrooms" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.TotalBathrooms" class="text-danger"></span>
+
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.Address" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.Address" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.Address" class="text-danger"></span>
+
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.City" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.City" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.City" class="text-danger"></span>
+
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label asp-for="@Model.Property.State" class="ms-2"></label>
+
+                        <input asp-for="@Model.Property.State" class="form-control" />
+
+                        <span asp-validation-for="@Model.Property.State" class="text-danger"></span>
+
+                    </div>
+                    
+                    
+
+                    <div class="mb-3">
+
+                        <label class="ms-2">Fee Type</label>
+
+                        @Html.DropDownListFor(c =>
+
+                        c.Property.Fees,
+
+                        Model.FeeType,
+
+                        "",
+
+                        new { @class = "form-select" }
+
+                        )
+
+                        <span asp-validation-for="@Model.Property.Fees" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="ms-2">Fee Type"></label>
+
+                        @Html.DropDownListFor(t =>
+
+                        t.Property.Amenities,
+
+                        Model.AmenityType,
+
+                        "",
+
+                        new { @class = "form-select" }
+
+                        )
+
+                        <span asp-validation-for="@Model.Property.Amenities" class="text-danger"></span>
+
+                    </div>
+
                 </div>
-                <div class="col-6 col-md-3">
-                    <a asp-page="Index" class="btn btn-outline-primary border form-control">Back to List</a>
-                </div>
+
+                
+
             </div>
+
+            <div class="row pt-2">
+
+                <div class="mb-3">
+
+                    <label for="" class="form-label">@(Model.Property.ImageUrl != null ? "Replace " : "")Picture</label>
+
+                    <input class="form-control" type="file" asp-for="@Model.Property.ImageUrl">
+
+                    <span class="text-danger" asp-validation-for="@Model.Property.ImageUrl"></span>
+
+                </div>
+
+                <div class="mb-3">
+
+                    @if (Model.Property.ImageUrl != null)
+
+                    {
+
+                        <input class="visually-hidden" type="hidden" asp-for="@Model.Property.ImageUrl"/>
+
+                        <div class="col-4">
+
+                            <div class="mt-1 form-text">Current picture</div>
+
+                            <img class="img-thumbnail" src="@Model.Property.ImageUrl"/>
+
+                        </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+            <div class="row pt-2">
+
+                <div class="col-6 col-md-3">
+
+                    @if (Model.Property.Id != 0)
+
+                    {
+
+                    <input asp-for="@Model.Property.Id" type="hidden" />
+
+                    }
+
+
+
+                    <button type="submit" class="btn btn-primary form-control">@(Model.Property.Id == 0 ? "Create" : "Update")</button>
+
+                </div>
+
+                <div class="col-6 col-md-3">
+
+                    <a asp-page="Index" class="btn btn-outline-primary border form-control">
+
+                        Back to List
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </form>
+
     </div>
+
 </div>
+
+
+
+}
 
 @section Scripts {
 <script>
@@ -98,5 +241,63 @@ else
         plugins: "lists",
         menubar: "file edit format"
     });
+    function ValidateInput() {
+        if (document.getElementById('txtName').value == "") {
+            Swal.fire('Error', 'Please Enter a Product Name', 'error');
+            return false;
+        }
+
+        if (document.getElementById('txtUPC').value == "") {
+            Swal.fire('Error', 'Please Enter a Product UPC', 'error');
+            return false;
+        }
+        if (document.getElementById('txtSize').value == "") {
+            Swal.fire('Error', 'Please Enter Product Size Information', 'error');
+            return false;
+        }
+
+        if ($('#txtUnitPrice').val() < .01) {
+            Swal.fire('Error', 'Please Enter a Unit Price Greater Than $.01', 'error');
+            return false;
+        }
+
+        if ($('#txtListPrice').val() < .01) {
+            Swal.fire('Error', 'Please Enter a List Price Greater Than $.01', 'error');
+            return false;
+        }
+
+        if ($('#txtHalfDozenPrice').val() < .01) {
+            Swal.fire('Error', 'Please Enter a Half Dozen+ Price Greater Than $.01', 'error');
+            return false;
+        }
+
+        if ($('#txtDozenPrice').val() < .01) {
+            Swal.fire('Error', 'Please Enter a Dozen+ Price Greater Than $.01', 'error');
+            return false;
+        }
+
+        if (tinyMCE.get('txtDesc').getContent() == "") {
+            Swal.fire('Error', 'Please Enter a Product Description', 'error');
+            return false;
+        }
+
+        if (document.getElementById("uploadBox").value == "") {
+            Swal.fire('Error', 'Please Select an Image', 'error')
+            return false
+        }
+
+        if ($('#ddlCategory').prop('selectedIndex') === 0) {
+            Swal.fire('Error', 'Please Select a Category', 'error');
+            return false;
+        }
+
+        if ($('#ddlManufacturer').prop('selectedIndex') === 0) {
+            Swal.fire('Error', 'Please Select a Manufacturer', 'error');
+            return false;
+        }
+        return true;
+    }
 </script>
 }
+
+        

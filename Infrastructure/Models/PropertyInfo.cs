@@ -31,10 +31,14 @@ namespace Infrastructure.Models
         public DateTime LastUpdated { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        
+        public string ImageUrl { get; set; }
+        public string SecondImageUrl { get; set; }
 
         // Changed IEnumerable to List to allow adding items
         public List<Amenity>? Amenities { get; set; } = new List<Amenity>();
-        public List<Media>? MediaItems { get; set; } = new List<Media>();
+        public List<Fee>? Fees { get; set; } = new List<Fee>();
+
         public List<Prices>? Prices { get; set; } = new List<Prices>();
     }
 }

@@ -4,6 +4,7 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240814072344_Addnewonefotmain")]
+    partial class Addnewonefotmain
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -293,10 +296,6 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("LastUpdated")
                         .HasColumnType("datetime2");
 
@@ -315,10 +314,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PropertyType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -728,7 +723,7 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany("Fees")
+                        .WithMany()
                         .HasForeignKey("PropertyInfoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -741,7 +736,7 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Infrastructure.Models.Media", b =>
                 {
                     b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
-                        .WithMany()
+                        .WithMany("MediaItems")
                         .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -892,7 +887,7 @@ namespace DataAccess.Migrations
                 {
                     b.Navigation("Amenities");
 
-                    b.Navigation("Fees");
+                    b.Navigation("MediaItems");
 
                     b.Navigation("Prices");
                 });
