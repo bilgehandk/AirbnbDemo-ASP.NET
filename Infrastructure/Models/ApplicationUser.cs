@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
@@ -7,20 +8,32 @@ namespace Infrastructure.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        public string Name { get; set; }
-
-        public DateTime? EmailVerifiedAt { get; set; }
-        
-        public string RememberToken { get; set; }
+        [DisplayName("First Name")]
+        public string? FirstName { get; set; }
 
         [Required]
-        public string PhoneNumber { get; set; }
-        
-        public string Description { get; set; }
+        [DisplayName("Last Name")]
+        public string? LastName { get; set; }
+
+        [DisplayName("Street Address")]
+        public string? StreetAddress { get; set; }
+
+        public string? City { get; set; }
+        public string? State { get; set; }
+
+        [DisplayName("Postal Code")]
+        public string? PostalCode { get; set; }
+
+        [NotMapped]
+        public string FullName 
+        { 
+            get { return $"{FirstName} {LastName}"; } 
+        }
 
         [Required]
         public string ProfileImage { get; set; }
 
-        // You might want to add additional properties or methods here
+        public IEnumerable<PropertyInfo>? Properties { get; set; }
+        public IEnumerable<Reservation>? Reservations { get; set; }
     }
 }

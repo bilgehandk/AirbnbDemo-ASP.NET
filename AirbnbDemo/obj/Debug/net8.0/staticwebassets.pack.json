@@ -13,48 +13,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\CBTD.png",
-      "PackagePath": "staticwebassets\\images\\CBTD.png"
+      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\images (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\images (1).jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\OrderConfirmation.png",
-      "PackagePath": "staticwebassets\\images\\OrderConfirmation.png"
+      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\images.jpeg",
+      "PackagePath": "staticwebassets\\images\\images.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\PlaceHolderImage.jpg",
-      "PackagePath": "staticwebassets\\images\\PlaceHolderImage.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\Cheetos.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\Cheetos.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\Coke.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\Coke.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\Doritos.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\Doritos.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\HonestTea.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\HonestTea.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\Menage.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\Menage.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\Sprite.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\Sprite.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\YellowTail.png",
-      "PackagePath": "staticwebassets\\images\\products\\YellowTail.png"
-    },
-    {
-      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\products\\ZeroWater.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\ZeroWater.jpg"
+      "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\images\\indir.jpeg",
+      "PackagePath": "staticwebassets\\images\\indir.jpeg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\Aribnb Demo\\AirbnbDemo\\wwwroot\\js\\site.js",

@@ -33,6 +33,24 @@
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/DataAccess/obj/Debug/net8.0/DataAccess.pdb
 /Users/bilgehandemirkaya/RiderProjects/AirbnbDemo/DataAccess/obj/Debug/net8.0/ref/DataAccess.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/DataAccess.deps.json
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/DataAccess.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/DataAccess.pdb
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/Infrastructure.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/Utility.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/Infrastructure.pdb
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/bin/Debug/net8.0/Utility.pdb
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.csproj.AssemblyReference.cache
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.AssemblyInfoInputs.cache
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.AssemblyInfo.cs
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.csproj.CoreCompileInputs.cache
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.sourcelink.json
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.csproj.Up2Date
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/DataAccess.pdb
+/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/Debug/net8.0/ref/DataAccess.dll
 C:\Users\USER\source\repos\Aribnb Demo\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
 C:\Users\USER\source\repos\Aribnb Demo\DataAccess\bin\Debug\net8.0\DataAccess.dll
 C:\Users\USER\source\repos\Aribnb Demo\DataAccess\bin\Debug\net8.0\DataAccess.pdb

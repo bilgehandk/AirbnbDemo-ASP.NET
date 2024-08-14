@@ -1,24 +1,20 @@
-using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.Models
 {
     public class Media
     {
-        [Key] 
         public int Id { get; set; }
-        
-        [Required] 
-        public int ModelId { get; set; }
 
         [Required]
-        public string ModelType { get; set; }
-        
-        [Required]
-        public string FileName { get; set; }
-        
-        public string? MimeType { get; set; }
+        public string UrlPath { get; set; }
 
-        // You can add a navigation property if needed, depending on the relationships
+        public bool IsMainImage { get; set; }
+
+        public int PropertyId { get; set; }
+
+        [ForeignKey("PropertyId")]
+        public PropertyInfo PropertyInfo { get; set; }
     }
 }

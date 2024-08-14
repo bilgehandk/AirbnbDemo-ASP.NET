@@ -2,7 +2,6 @@
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 using Utility;
 
 namespace DataAccess.DbInitializer
@@ -10,19 +9,19 @@ namespace DataAccess.DbInitializer
     public class DbInitializer : IDbInitializer
     {
         private readonly ApplicationDbContext _db;
-		private readonly UserManager<IdentityUser> _userManager;
-		private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-		public DbInitializer(ApplicationDbContext db, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public DbInitializer(ApplicationDbContext db, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
-			_userManager = userManager;
-			_roleManager = roleManager;
+            _userManager = userManager;
+            _roleManager = roleManager;
 
-		}
+        }
 
 
-		public void Initialize()
+        public void Initialize()
         {
             _db.Database.EnsureCreated();
 
@@ -41,130 +40,178 @@ namespace DataAccess.DbInitializer
 
             if (_db.ApplicationUsers.Any())
             {
-                return; //DB has been seeded
+                return; // DB has been seeded
             }
 
-			//create roles if they are not created
-			//SD is a “Static Details” class we will create in Utility to hold constant strings for Roles
+            // Create roles if they are not created
+            _roleManager.CreateAsync(new IdentityRole(SD.AdminRole)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.PropertyOwner)).GetAwaiter().GetResult();
+            _roleManager.CreateAsync(new IdentityRole(SD.CustomerRole)).GetAwaiter().GetResult();
 
-			_roleManager.CreateAsync(new IdentityRole(SD.AdminRole)).GetAwaiter().GetResult();
-			_roleManager.CreateAsync(new IdentityRole(SD.ShipperRole)).GetAwaiter().GetResult();
-			_roleManager.CreateAsync(new IdentityRole(SD.CustomerRole)).GetAwaiter().GetResult();
-
-			//Create at least one "Super Admin" or “Admin”.  Repeat the process for other users you want to seed
-
-			_userManager.CreateAsync(new ApplicationUser
-			{
-				UserName = "Bilgehan",
-				Email = "bilge@bilkent.edu.tr",
-				PhoneNumber = "8015556919",
-				Description = "Student",
-                ProfileImage = "/images/CBTD.png"
-			}, "Admin123*").GetAwaiter().GetResult();
-
-			ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "rfry@weber.edu");
-
-			_userManager.AddToRoleAsync(user, SD.AdminRole).GetAwaiter().GetResult();
-
-			_db.SaveChanges();
-			
-			// Odalar ekleniyor
-            var rooms = new List<Property>
+            // Create at least one "Super Admin" or "Admin"
+            _userManager.CreateAsync( new ApplicationUser
             {
-                new Property
+                UserName = "bilgehan@bilkent.edu",
+                Email = "bilgehan@bilkent.edu",
+                FirstName = "Bilgehan",
+                LastName = "Demirkaya",
+                PhoneNumber = "8015556919",
+                StreetAddress = "123 Main Street",
+                State = "OR",
+                PostalCode = "84408",
+                City = "Portland",
+                ProfileImage = "/images/CBTD.png"
+            }, "Admin123*").GetAwaiter().GetResult();
+            
+            ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "bilge@bilkent.edu.tr");
+            _userManager.AddToRoleAsync(user, SD.AdminRole).GetAwaiter().GetResult();
+
+            _db.SaveChanges();
+
+            // Add FeeTypes
+            var feeTypes = new List<FeeType>
+            {
+                new FeeType { Name = "Cleaning Fee", Description = "Fee for cleaning the property after checkout." },
+                new FeeType { Name = "Service Fee", Description = "Service fee for handling the reservation." }
+            };
+            _db.FeeType.AddRange(feeTypes);
+            _db.SaveChanges();
+
+            // Add properties
+            var properties = new List<PropertyInfo>
+            {
+                new PropertyInfo
                 {
-                    HomeType = "Apartment",
-                    RoomType = "Entire Place",
+                    PropertyName = "Summer Apartment",
+                    PropertyType = "Apartment",
                     TotalOccupancy = 4,
                     TotalBedrooms = 2,
                     TotalBathrooms = 1,
-                    Summary = "Cozy apartment in the city center.",
+                    Description = "Cozy apartment in the city center.",
                     Address = "123 Main St, Cityville",
-                    HasTv = true,
-                    HasKitchen = true,
-                    HasAirCon = true,
-                    HasHeating = true,
-                    HasInternet = true,
-                    Price = 120,
-                    PublishedAt = DateTime.Now.AddMonths(-1),
-                    OwnerId = 1,
-                    CreatedAt = DateTime.Now.AddMonths(-1),
-                    UpdatedAt = DateTime.Now,
+                    City = "Cityville",
+                    State = "Stateville",
+                    LastUpdated = DateTime.Now,
+                    OwnerId = user.Id,
                     Latitude = 40.7128f,
                     Longitude = -74.0060f
                 }
             };
-
-            foreach (var room in rooms)
-            {
-                _db.Room.Add(room);
-            }
-
+            _db.Property.AddRange(properties);
             _db.SaveChanges();
 
-            // Rezervasyonlar ekleniyor
-            var reservations = new List<Reservations>
+            // Add CalendarAvailability
+            var calendarAvailabilities = new List<Calenderavailability>
             {
-                new Reservations
+                new Calenderavailability
                 {
-                    UserId = user.Id,
-                    RoomId = rooms.First().Id,
-                    StartDate = DateTime.Now.AddDays(10),
-                    EndDate = DateTime.Now.AddDays(15),
-                    Price = 120,
-                    Total = 600,
-                    CreatedAt = DateTime.Now,
-                    UpdatedAt = DateTime.Now
+                    PropertyId = properties.First().Id,
+                    StartDate = DateTime.Now.AddDays(20),
+                    EndDate = DateTime.Now.AddDays(25)
                 }
             };
-
-            foreach (var reservation in reservations)
-            {
-                _db.Reservations.Add(reservation);
-            }
-
+            _db.CalenderAvailability.AddRange(calendarAvailabilities);
             _db.SaveChanges();
 
-            // Yorumlar ekleniyor
-            var reviews = new List<Reviews>
+            // Add AmenityTypes
+            var amenityTypes = new List<AmenityType>
             {
-                new Reviews
+                new AmenityType { Name = "WiFi" },
+                new AmenityType { Name = "Air Conditioning" }
+            };
+            _db.AmenityType.AddRange(amenityTypes);
+            _db.SaveChanges();
+
+            // Add Amenities
+            var amenities = new List<Amenity>
+            {
+                new Amenity
+                {
+                    PropertyId = properties.First().Id,
+                    AmenityTypeId = amenityTypes.First().Id
+                }
+            };
+            _db.Amenity.AddRange(amenities);
+            _db.SaveChanges();
+
+            // Add Prices
+            var prices = new List<Prices>
+            {
+                new Prices
+                {
+                    PropertyId = properties.First().Id,
+                    StartDate = DateTime.Now.AddDays(5),
+                    EndDate = DateTime.Now.AddDays(10),
+                    Amount = 150
+                }
+            };
+            _db.Prices.AddRange(prices);
+            _db.SaveChanges();
+
+            // Add Fees
+            var fees = new List<Fee>
+            {
+                new Fee
+                {
+                    PropertyId = properties.First().Id,
+                    FeeAmount = 50,
+                    FeeTypeId = feeTypes.First().FeeTypeId
+                }
+            };
+            _db.Fee.AddRange(fees);
+            _db.SaveChanges();
+
+            // Add ReservationStatuses
+            var reservationStatuses = new List<ReservationStatus>
+            {
+                new ReservationStatus { Type = "Confirmed" },
+                new ReservationStatus { Type = "Cancelled" }
+            };
+            _db.ReservationStatus.AddRange(reservationStatuses);
+            _db.SaveChanges();
+
+            // Add Reservations
+            var reservations = new List<Reservation>
+            {
+                new Reservation
+                {
+                    ApplicationUserId = user.Id,
+                    PropertyId = properties.First().Id,
+                    StartDate = DateTime.Now.AddDays(10),
+                    EndDate = DateTime.Now.AddDays(15),
+                    TotalPrice = 600,
+                    LastUpdated = DateTime.Now,
+                    ReservationStatusId = reservationStatuses.First().Id
+                }
+            };
+            _db.Reservations.AddRange(reservations);
+            _db.SaveChanges();
+
+            // Add Reviews
+            var reviews = new List<Review>
+            {
+                new Review
                 {
                     ReservationId = reservations.First().Id,
                     Rating = 5,
                     Comment = "Amazing stay! The host was very helpful and the apartment was spotless."
                 }
             };
-
-            foreach (var review in reviews)
-            {
-                _db.Reviews.Add(review);
-            }
-
+            _db.Reviews.AddRange(reviews);
             _db.SaveChanges();
 
-            // Medya ekleniyor
-            var media = new List<Media>
+            // Add Media
+            var mediaItems = new List<Media>
             {
                 new Media
                 {
-                    ModelId = rooms.First().Id,
-                    ModelType = "Room",
-                    FileName = "room1.jpg",
-                    MimeType = "image/jpeg"
+                    Id = 1,
+                    UrlPath = "room1.jpg",
+                    IsMainImage = true
                 }
             };
-
-            foreach (var mediaItem in media)
-            {
-                _db.Media.Add(mediaItem);
-            }
-
+            _db.Media.AddRange(mediaItems);
             _db.SaveChanges();
-
-
         }
-       }
-}   
-
-
+    }
+}
