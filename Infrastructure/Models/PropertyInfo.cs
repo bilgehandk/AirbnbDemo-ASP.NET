@@ -44,9 +44,7 @@ namespace Infrastructure.Models
         [Required]
         [Display(Name = "Fee")]
         public int FeeId { get; set; }
-        [Required]
-        [Display(Name = "CalenderAvailability")]
-        public int CalenderAvailabilityId { get; set; }
+        
 
         /// <summary>
         /// These are the two other objects I'm relating, linking the PK to the FK
@@ -57,8 +55,5 @@ namespace Infrastructure.Models
 
         [ForeignKey("FeeId")]
         public Fee? Fee { get; set; }
-        
-        [ForeignKey("CalenderAvailabilityId")]
-        public CalenderAvailability? CalenderAvailability { get; set; }
     }
 }

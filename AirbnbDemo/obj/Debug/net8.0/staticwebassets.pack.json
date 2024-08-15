@@ -109,8 +109,20 @@
       "PackagePath": "staticwebassets/images/products/ZeroWater.jpg"
     },
     {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/a86ebed9-4ad7-420d-aa00-e76f26ac5159.webp",
+      "PackagePath": "staticwebassets/images/products/a86ebed9-4ad7-420d-aa00-e76f26ac5159.webp"
+    },
+    {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/b41d7ba2-5f91-41bf-b34b-d7917cf25914.jpg",
       "PackagePath": "staticwebassets/images/products/b41d7ba2-5f91-41bf-b34b-d7917cf25914.jpg"
+    },
+    {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/b79561b1-09d3-44b2-b749-04f2e3b2b9a6.webp",
+      "PackagePath": "staticwebassets/images/products/b79561b1-09d3-44b2-b749-04f2e3b2b9a6.webp"
+    },
+    {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/ba6cd48c-3ec6-4062-8540-73548c621094.webp",
+      "PackagePath": "staticwebassets/images/products/ba6cd48c-3ec6-4062-8540-73548c621094.webp"
     },
     {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/ba8c4ec4-300a-40c7-952a-8bb39a25d2ce.webp",
@@ -119,6 +131,10 @@
     {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/ccda7ea2-bef2-4242-a588-2fbeea23522e.jpg",
       "PackagePath": "staticwebassets/images/products/ccda7ea2-bef2-4242-a588-2fbeea23522e.jpg"
+    },
+    {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/d4734fbe-9b47-4145-817c-6d7885ea682a.webp",
+      "PackagePath": "staticwebassets/images/products/d4734fbe-9b47-4145-817c-6d7885ea682a.webp"
     },
     {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/d6f9bccc-9afb-4ac0-8792-a4aef093d896.jpg",

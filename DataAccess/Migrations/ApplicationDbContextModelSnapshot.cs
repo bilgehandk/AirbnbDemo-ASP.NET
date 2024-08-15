@@ -53,10 +53,15 @@ namespace DataAccess.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PropertyInfoId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("CalenderId");
+
+                    b.HasIndex("PropertyInfoId");
 
                     b.ToTable("CalenderAvailability");
                 });
@@ -175,9 +180,6 @@ namespace DataAccess.Migrations
                     b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("CalenderAvailabilityId")
-                        .HasColumnType("int");
-
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -239,9 +241,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("AmenityId");
 
                     b.HasIndex("ApplicationUserId");
-
-                    b.HasIndex("CalenderAvailabilityId")
-                        .IsUnique();
 
                     b.HasIndex("FeeId");
 
@@ -595,6 +594,17 @@ namespace DataAccess.Migrations
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
+            modelBuilder.Entity("Infrastructure.Models.CalenderAvailability", b =>
+                {
+                    b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
+                        .WithMany()
+                        .HasForeignKey("PropertyInfoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PropertyInfo");
+                });
+
             modelBuilder.Entity("Infrastructure.Models.OrderHeader", b =>
                 {
                     b.HasOne("Infrastructure.Models.ApplicationUser", "ApplicationUser")
@@ -616,12 +626,6 @@ namespace DataAccess.Migrations
                         .WithMany("Properties")
                         .HasForeignKey("ApplicationUserId");
 
-                    b.HasOne("Infrastructure.Models.CalenderAvailability", "CalenderAvailability")
-                        .WithOne("PropertyInfo")
-                        .HasForeignKey("Infrastructure.Models.PropertyInfo", "CalenderAvailabilityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Infrastructure.Models.Fee", "Fee")
                         .WithMany()
                         .HasForeignKey("FeeId")
@@ -629,8 +633,6 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Amenity");
-
-                    b.Navigation("CalenderAvailability");
 
                     b.Navigation("Fee");
                 });
@@ -738,12 +740,6 @@ namespace DataAccess.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Infrastructure.Models.CalenderAvailability", b =>
-                {
-                    b.Navigation("PropertyInfo")
                         .IsRequired();
                 });
 
