@@ -155,9 +155,9 @@
                                                 //Calculate Total Date as Double;
                                                 var totalDays = (endDate - startDate).TotalDays;
 
-                                                total += totalDays* price * Model.hostCount;
+                                                total += totalDays * price * Model.hostCount;
                                             }
-                                           
+
                                             <div class="col-6">Total:</div>
                                             <div class="col-6">$@total.ToString("0.00")</div>
                                         </div>
@@ -174,11 +174,20 @@
                         <div class=" col-md-6 pb-1">
                             <a class="btn btn-success form-control " style="height:50px;" asp-page="Index">Back to Home</a>
                         </div>
+                        @if (TempData["UserloggedIn"] != null)
+                        {
+                        <div class=" col-md-6 pb-1">
+                                <button type="submit" value="Reserve" class="btn btn-primary form-control" style="height:50px;">Reserve</button>
+                            </div>
 
+
+                        } else
+                        {
                         <div class=" col-md-6 pb-1">
                             <a class="btn btn-danger form-control" style="height:50px" asp-area="Identity" asp-page="/Account/Login">Login to Add to Cart</a>
                         </div>
-
+                            
+                        }
                     </div>
                 </div>
             </div>

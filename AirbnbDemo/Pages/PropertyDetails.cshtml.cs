@@ -13,6 +13,7 @@ namespace CBTDWeb.Pages
         public int hostCount { get; set; }
         public ApplicationUser hostUser { get; set; }
         public CalenderAvailability calenderAvailability { get; set; }
+        public Reservation objCart = new();
 
         public PropertyDetailsModel(UnitOfWork unitOfWork)
         {
@@ -40,5 +41,48 @@ namespace CBTDWeb.Pages
             // WHERE P.ID = @ID
             return Page();
         }
+
+        //    public IActionResult OnPost(PropertyInfo property, DateTime startDate, DateTime endDate)
+        //    {
+        //        //check if user is logged in
+        //        var claimsIdentity = User.Identity as ClaimsIdentity;
+        //        var userId = claimsIdentity?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        //        var fee = property.Fee.FeeAmount;
+        //        var price = property.Prices;
+
+
+        //        //check if the reservation is existed or not
+        //        var existingReserve = _unitOfWork.Reservations.Get(
+        //            u => u.ApplicationUserId == userId && u.PropertyId == objProperty.Id);
+        //        if (existingReserve == null)
+        //        {
+        //            var reservation = new Reservation
+        //            {
+        //                ApplicationUserId = userId,
+        //                PropertyId = objProperty.Id,
+        //                StartDate = startDate,
+        //                EndDate = endDate,
+        //                // totalHost = hostCount;
+        //                TotalPrice = (int)getTotalPrice(price, startDate, endDate, fee),
+        //                LastUpdated = DateTime.UtcNow,
+        //                ReservationStatus = new()
+        //            };
+        //            reservation.ReservationStatus.Type = "Request";
+        //        }
+        //        else
+        //        {
+        //            _unitOfWork.Reservations.updateReservation(existingReserve, hostCount);
+        //            _unitOfWork.Reservations.Update(existingReserve);
+        //        }
+        //        _unitOfWork.Commit();
+        //        return RedirectToPage("Reservation");
+        //    }
+
+        //    private double getTotalPrice(double price, DateTime startDate, DateTime endDate, float fee)
+        //    {
+        //        var duration = (endDate - startDate).TotalDays;
+        //        var totalPrice = duration * price + (double)fee;
+        //        return totalPrice;
+        //    }
     }
 }
