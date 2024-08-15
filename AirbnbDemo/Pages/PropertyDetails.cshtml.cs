@@ -12,12 +12,14 @@ namespace CBTDWeb.Pages
         [BindProperty]
         public int hostCount { get; set; }
         public ApplicationUser hostUser { get; set; }
+        public CalenderAvailability calenderAvailability { get; set; }
 
         public PropertyDetailsModel(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             objProperty = new PropertyInfo();
             hostUser = new ApplicationUser();
+            calenderAvailability = new CalenderAvailability();
         }
 
         public IActionResult OnGet(int? id)
@@ -30,6 +32,7 @@ namespace CBTDWeb.Pages
             //FOR OUTER JOIN , CATEGORY.MANUFACTUER, STUDENT = category left join manufacturer and join student
             objProperty = _unitOfWork.Property.Get(p => p.Id == id, includes: "Amenity,Fee");
             hostUser = _unitOfWork.ApplicationUser.Get(u => u.Id == objProperty.OwnerId);
+            calenderAvailability = _unitOfWork.CalenderAvaliablity.Get(u => u.PropertyId == objProperty.Id);
             // the p here stored the result of the sql querry
             // SELECT * FROM PRODUCTS P
             // JOIN CATEGORIES C ON C.PRODUCTID = P.PRODUCTID

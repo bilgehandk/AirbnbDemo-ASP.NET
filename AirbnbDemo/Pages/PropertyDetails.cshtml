@@ -89,7 +89,7 @@
                                     <div class="col-12">
                                         <label>City:</label>
                                     </div>
-                                  
+
                                     <div class="col-12 border d-flex flex-row my-auto p-1">
                                         <p>@Model.objProperty.City<p>
                                     </div>
@@ -120,30 +120,25 @@
                                 </div>
                             </div>
                             <div class="col-6 col-md-6 reserve border bg-primary p-4 text-white">
-                                <div class="col-12">
-                                    <label>Check In</label>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="startDate">Start Date</label>
+                                        <input type="date" id="startDate" name="startDate" class="form-control" value="@Model.calenderAvailability.StartDate" />
+                                    </div>
                                 </div>
-                                <div class="col-12">
-
-                                    <input readonly class="form-control" placeholder="{{State}}" />
-                                    <span class="text-danger"></span>
-
-                                </div>
-                                <div class="col-12">
-                                    <label>Check Out</label>
-                                </div>
-                                <div class="col-12">
-
-                                    <input readonly class="form-control" placeholder="{{State}}" />
-                                    <span class="text-danger"></span>
-
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="endDate">End Date</label>
+                                        <input type="date" id="endDate" name="endDate" class="form-control" value="@Model.calenderAvailability.EndDate" />
+                                    </div>
                                 </div>
                                 <div class="col-12">
                                     <label>Number of Hosts:</label>
                                 </div>
                                 <div class="col-12">
 
-                                    <input readonly class="form-control" placeholder="{{State}}" />
+                                    <input asp-for="hostCount" class="form-control" value="1" />
+
                                     <span class="text-danger"></span>
 
                                 </div>
@@ -152,8 +147,19 @@
                                     <div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 pr-4">
                                         <div class="row justify-content-between">
 
+                                            @{
+                                                var total = 0.0;
+                                                var startDate = Model.calenderAvailability.StartDate;
+                                                var endDate = Model.calenderAvailability.EndDate;
+                                                var price = Model.objProperty.Prices;
+                                                //Calculate Total Date as Double;
+                                                var totalDays = (endDate - startDate).TotalDays;
+
+                                                total += totalDays* price * Model.hostCount;
+                                            }
+                                           
                                             <div class="col-6">Total:</div>
-                                            <div class="col-6">Price</div>
+                                            <div class="col-6">$@total.ToString("0.00")</div>
                                         </div>
 
                                     </div>
