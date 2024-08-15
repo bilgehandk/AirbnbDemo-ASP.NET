@@ -18,7 +18,9 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.3",
           "MimeKit": "4.7.1",
-          "Stripe.net": "45.7.0"
+          "Moment.js": "2.30.1",
+          "Stripe.net": "45.7.0",
+          "fullcalendar": "3.9.0"
         },
         "runtime": {
           "AirbnbDemo.dll": {}
@@ -64,6 +66,12 @@
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.4.0.33771"
           }
+        }
+      },
+      "fullcalendar/3.9.0": {
+        "dependencies": {
+          "Moment.js": "2.30.1",
+          "jQuery": "2.0.0"
         }
       },
       "Humanizer/2.14.1": {
@@ -606,6 +614,7 @@
           }
         }
       },
+      "jQuery/2.0.0": {},
       "MailKit/4.7.1.1": {
         "dependencies": {
           "MimeKit": "4.7.1",
@@ -1660,6 +1669,7 @@
           }
         }
       },
+      "Moment.js/2.30.1": {},
       "Mono.TextTemplating/2.3.1": {
         "dependencies": {
           "System.CodeDom": "5.0.0"
@@ -2127,6 +2137,13 @@
       "path": "bouncycastle.cryptography/2.4.0",
       "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
     },
+    "fullcalendar/3.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lx1CYPPY8AGVtkDHKl+gjVjD2SKGBi3WC+gEU/qn848HRnO/po3KurcYoblr1Yyp6Iia8kXffYZy62adAHNj+A==",
+      "path": "fullcalendar/3.9.0",
+      "hashPath": "fullcalendar.3.9.0.nupkg.sha512"
+    },
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -2476,6 +2493,13 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "jQuery/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u3YiE0QnFnBExPkBPqWr2EVd8nh01iQlMWPRfa7b1fQ53YuMtHw+Y9oaJukHtEHaMpyL0PJzq69y3/5AxWogGA==",
+      "path": "jquery/2.0.0",
+      "hashPath": "jquery.2.0.0.nupkg.sha512"
     },
     "MailKit/4.7.1.1": {
       "type": "package",
@@ -3001,6 +3025,13 @@
       "sha512": "sha512-Qoj4aVvhX14A1FNvaJ33hzOP4VZI2j+Mr38I9wSGcjMq4BYDtWLJG89aJ9nRW2cNfH6Czjwyp7+Mh++xv3AZvg==",
       "path": "mimekit/4.7.1",
       "hashPath": "mimekit.4.7.1.nupkg.sha512"
+    },
+    "Moment.js/2.30.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LIrDTazK51DhrqkMOy97PyS1jWsUHAhaIUYgB4aQTLLUxizMjk0QRltNb535Qgs5IzN/uv1SbFr/qv3PFnkTOA==",
+      "path": "moment.js/2.30.1",
+      "hashPath": "moment.js.2.30.1.nupkg.sha512"
     },
     "Mono.TextTemplating/2.3.1": {
       "type": "package",

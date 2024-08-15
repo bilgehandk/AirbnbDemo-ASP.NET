@@ -9,8 +9,7 @@ namespace Infrastructure.Models
         [Key]
         public int CalenderId { get; set; }
 
-        [Required]
-        [ForeignKey("PropertyInfo")]
+        [ForeignKey("Property")]
         public int PropertyId { get; set; }
         public PropertyInfo PropertyInfo { get; set; }
 

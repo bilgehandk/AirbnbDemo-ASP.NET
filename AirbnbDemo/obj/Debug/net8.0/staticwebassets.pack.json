@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets/images/products/330cc2ad-ea30-4e95-8ee6-854077740756.jpg"
     },
     {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/3e924b1b-f7f0-4cbe-b3a7-e747415f0785.jpg",
+      "PackagePath": "staticwebassets/images/products/3e924b1b-f7f0-4cbe-b3a7-e747415f0785.jpg"
+    },
+    {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/45b25792-0ac4-41fa-a976-a6c15bc4ca8e.jpg",
       "PackagePath": "staticwebassets/images/products/45b25792-0ac4-41fa-a976-a6c15bc4ca8e.jpg"
     },
@@ -67,6 +71,10 @@
     {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/9a785558-e354-4a55-be90-e17fea794c45.jpg",
       "PackagePath": "staticwebassets/images/products/9a785558-e354-4a55-be90-e17fea794c45.jpg"
+    },
+    {
+      "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/9cca21ca-f1c4-44ad-9d6c-6ea90e0fa086.webp",
+      "PackagePath": "staticwebassets/images/products/9cca21ca-f1c4-44ad-9d6c-6ea90e0fa086.webp"
     },
     {
       "Id": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/wwwroot/images/products/Cheetos.jpg",

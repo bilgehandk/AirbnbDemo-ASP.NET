@@ -78,9 +78,17 @@
               "target": "Package",
               "version": "[4.7.1, )"
             },
+            "Moment.js": {
+              "target": "Package",
+              "version": "[2.30.1, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[45.7.0, )"
+            },
+            "fullcalendar": {
+              "target": "Package",
+              "version": "[3.9.0, )"
             }
           },
           "imports": [
