@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {}
+    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {}
   },
   "projects": {
-    "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
+    "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
+        "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
         "projectName": "Utility",
-        "projectPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
-        "packagesPath": "/Users/bmathews42/.nuget/packages/",
-        "outputPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/obj/",
+        "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj",
+        "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
+        "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bmathews42/.nuget/NuGet/NuGet.Config"
+          "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

@@ -3734,19 +3734,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/bmathews42/.nuget/packages/": {}
+    "/Users/bilgehandemirkaya/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bmathews42/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
+      "projectUniqueName": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
-      "packagesPath": "/Users/bmathews42/.nuget/packages/",
-      "outputPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/DataAccess/obj/",
+      "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/DataAccess.csproj",
+      "packagesPath": "/Users/bilgehandemirkaya/.nuget/packages/",
+      "outputPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/DataAccess/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bmathews42/.nuget/NuGet/NuGet.Config"
+        "/Users/bilgehandemirkaya/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3758,11 +3758,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj"
+            "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Infrastructure/Infrastructure.csproj"
             },
-            "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
-              "projectPath": "/Users/bmathews42/AirbnbDemo-ASP.NET/Utility/Utility.csproj"
+            "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj": {
+              "projectPath": "/Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/Utility/Utility.csproj"
             }
           }
         }
