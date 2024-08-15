@@ -1,24 +1,19 @@
 ﻿@page
-@model PropertyDetailModel
-@{
-}
-<form>
+@model CBTDWeb.Pages.PropertyDetailModel
 
-    <div class="container  pb-4 border d-flex flex-column align-items-center">
+<form method="post">
+    <input type="hidden" asp-for="objProperty.Id" />
+
+    <div class="container pb-4 border d-flex flex-column align-items-center">
         <div class="col-8">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./images/products/p1_kitchen.webp" class="d-block w-100" alt="...">
+                        <img src="@Model.objProperty.ImageUrl" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/products/p1_living.webp" class="d-block w-100" alt="...">
+                        <img src="@Model.objProperty.SecondImageUrl" class="d-block w-100" alt="...">
                     </div>
-                    <!--
-                    <div class="carousel-item">
-                        <img src="./images/properties/p1_garden.webp" class="d-block w-100" alt="...">
-                    </div>
-                    -->
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -35,32 +30,31 @@
             <div class="card container">
                 <div class="card-header bg-primary text-light d-flex flex-row justify-content-between">
                     <div class="col-8">
-                        <h1>Property name</h1>
-                        <p> Property Type</p>
-                        <p> Host name</p>
+                        <h1>@Model.objProperty.PropertyName</h1>
+                        <p>@Model.objProperty.PropertyType</p>
+                        <p>@Model.hostUser.FullName</p>
                     </div>
                     <div class="col-4 d-flex flex-column text-center justify-content-between">
-                        <div class="col-12 ">
-                            <h2>Price</h2>
+                        <div class="col-12">
+                            <h2>Daily Prices : $@Model.objProperty.Prices</h2>
                         </div>
-                        <div class=" d-flex flex-row justify-content-center">
-
+                        <div class="d-flex flex-row justify-content-center">
                             <div class="col-3 p-1 column align-content-center">
                                 <i class="bi bi-person-circle"></i>
-                                <p>??</p>
+                                <p>@Model.objProperty.TotalOccupancy</p>
                             </div>
                             <div class="col-3 p-1 column align-content-center">
-                                <i class="bi bi-door-closed"></i>
-                                <p>??</p>
+                                <ion-icon name="bed-outline"></ion-icon>
+                                <p>@Model.objProperty.TotalBedrooms</p>
                             </div>
-
                             <div class="col-3 p-1 column align-content-center">
-                                <i class="bi bi-file-spreadsheet"></i>
-                                <p>??</p>
+                                <i class="bi bi-tsunami"></i>
+                                <p>@Model.objProperty.TotalBathrooms</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="card-body">
                     <div class="container rounded p-2">
                         <div class="row">
@@ -70,103 +64,79 @@
                                         <label>Address</label>
                                     </div>
                                     <div class="col-12">
-
-                                        <input readonly class="form-control" placeholder="{{Address}}" />
-                                        <span class="text-danger"></span>
-
+                                        <p>@Model.objProperty.Address</p>
                                     </div>
                                     <div class="col-12">
-                                        <label>City</label>
+                                        <label>City:</label>
                                     </div>
                                     <div class="col-12">
-
-                                        <input readonly class="form-control" placeholder="{{City}}" />
-                                        <span class="text-danger"></span>
-
+                                        <p>@Model.objProperty.City</p>
                                     </div>
                                     <div class="col-12">
-                                        <label>State</label>
+                                        <label>State:</label>
                                     </div>
                                     <div class="col-12">
-
-                                        <input readonly class="form-control" placeholder="{{State}}" />
-                                        <span class="text-danger"></span>
-
+                                        <p>@Model.objProperty.State</p>
                                     </div>
                                     <div class="col-12">
-                                        <label>Amenity</label>
+                                        <label>Amenity:</label>
                                     </div>
                                     <div class="col-12">
-
-                                        <input readonly class="form-control" placeholder="{{Amenity 1}}" />
-                                        <span class="text-danger"></span>
-
+                                        <p>@Model.objProperty.Amenity?.Name</p>
                                     </div>
-
+                                    <div class="col-12">
+                                        <label>Fee:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>@Model.objProperty.Fee?.Name</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <label>Description:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>@Model.objProperty.Description</p>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="col-6 col-md-6 reserve border bg-primary p-4 text-white">
-                                <div class="col-12">
-                                    <label>Check In</label>
+                                <div class="form-group">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="date" id="startDate" name="startDate" class="form-control" asp-for="calenderAvailability.StartDate" />
                                 </div>
-                                <div class="col-12">
 
-                                    <input readonly class="form-control" placeholder="{{State}}" />
-                                    <span class="text-danger"></span>
-
+                                <div class="form-group">
+                                    <label for="endDate">End Date</label>
+                                    <input type="date" id="endDate" name="endDate" class="form-control" asp-for="calenderAvailability.EndDate" />
                                 </div>
-                                <div class="col-12">
-                                    <label>Check Out</label>
-                                </div>
-                                <div class="col-12">
 
-                                    <input readonly class="form-control" placeholder="{{State}}" />
-                                    <span class="text-danger"></span>
-
+                                <div class="form-group">
+                                    <label for="hostCount">Number of Hosts:</label>
+                                    <input asp-for="hostCount" class="form-control" value="1" />
                                 </div>
-                                <div class="col-12">
-                                    <label>Number of Hosts:</label>
-                                </div>
-                                <div class="col-12">
 
-                                    <input readonly class="form-control" placeholder="{{State}}" />
-                                    <span class="text-danger"></span>
-
-                                </div>
                                 <hr style="border: none; height: 1px; background-color: white;">
+
                                 <div class="row">
                                     <div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 pr-4">
                                         <div class="row justify-content-between">
-
-                                            <div class="col-6">Total:</div>
-                                            <div class="col-6">Price</div>
+                                            @if (Model.calenderAvailability != null)
+                                            {
+                                                <button type="submit" class="btn btn-danger btn-sm col-md-8 offset-md-4 col-lg-6 offset-lg-6" id="btnBook">
+                                                    Reserve
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                <p>No availability</p>
+                                            }
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                        <div class=" col-md-6 pb-1">
-                            <a class="btn btn-success form-control " style="height:50px;" asp-page="Index">Back to Home</a>
-                        </div>
-                        @if (TempData["UserLoggedIn"] != null)
-                        {
-                            <div class=" col-md-6 pb-1">
-                                <button type="submit" value="Add to Cart" class="btn btn-primary form-control" style="height:50px;">Add to Cart</button>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class=" col-md-6 pb-1">
-                                <a class="btn btn-danger form-control" style="height:50px" asp-area="Identity" asp-page="/Account/Login">Login to Add to Cart</a>
-                            </div>
-                        }
-                    </div>
+                    @* Additional property details *@
                 </div>
             </div>
         </div>

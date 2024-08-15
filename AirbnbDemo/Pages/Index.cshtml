@@ -36,15 +36,16 @@
     {
         <div class="col-lg-3 col-md-6">
             <div class="card h-100">
-                <img src="/images/Products/Cheetos.jpg" height="200" class="card-img-top object-fit-cover"/>
+                <img src="@property.ImageUrl" height="200" class="card-img-top object-fit-cover"/>
                 <div class="card-body d-flex flex-column justify-content-between">
                     <div class="pl-1">
                         <p class="card-title h5 text-primary">@property.PropertyName</p>
                         <p class="card-title text-info"><b>@property.City, @property.State</b></p>
+                        <p class="card-title text-info"><b>$@property.Prices</b></p>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a asp-page="ProductDetails" class="btn btn-primary form-control" asp-route-id="@property.Id">Details</a>
+                    <a asp-page="PropertyDetail" class="btn btn-primary form-control" asp-route-id="@property.Id">Details</a>
                 </div>
             </div>
         </div>

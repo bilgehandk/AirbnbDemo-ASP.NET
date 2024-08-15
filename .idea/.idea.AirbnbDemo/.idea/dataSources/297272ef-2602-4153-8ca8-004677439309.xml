@@ -16783,8 +16783,8 @@
     </schema>
     <schema id="5561" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-08-15.12:27:44.603</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2024-08-15.07:27:44</LastIntrospectionLocalTimestamp>
+      <IntrospectionTimestamp>2024-08-15.13:10:04.390</IntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-15.08:10:04</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5562" parent="5510" name="guest">
@@ -16794,122 +16794,122 @@
       <ObjectId>4</ObjectId>
     </schema>
     <table id="5564" parent="5561" name="Amenity">
-      <CreatedTimestamp>2024-08-15.12:27:36.070</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.297</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.530</ModifiedTimestamp>
-      <ObjectId>205959810</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.750</ModifiedTimestamp>
+      <ObjectId>1053962831</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5565" parent="5561" name="AspNetRoleClaims">
-      <CreatedTimestamp>2024-08-15.12:27:36.297</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.520</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.683</ModifiedTimestamp>
-      <ObjectId>397960494</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.907</ModifiedTimestamp>
+      <ObjectId>1245963515</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5566" parent="5561" name="AspNetRoles">
-      <CreatedTimestamp>2024-08-15.12:27:36.110</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.333</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.720</ModifiedTimestamp>
-      <ObjectId>237959924</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.940</ModifiedTimestamp>
+      <ObjectId>1085962945</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5567" parent="5561" name="AspNetUserClaims">
-      <CreatedTimestamp>2024-08-15.12:27:36.333</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.557</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.753</ModifiedTimestamp>
-      <ObjectId>445960665</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.977</ModifiedTimestamp>
+      <ObjectId>1293963686</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5568" parent="5561" name="AspNetUserLogins">
-      <CreatedTimestamp>2024-08-15.12:27:36.370</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.597</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.790</ModifiedTimestamp>
-      <ObjectId>493960836</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.013</ModifiedTimestamp>
+      <ObjectId>1341963857</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5569" parent="5561" name="AspNetUserRoles">
-      <CreatedTimestamp>2024-08-15.12:27:36.410</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.633</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.827</ModifiedTimestamp>
-      <ObjectId>541961007</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.050</ModifiedTimestamp>
+      <ObjectId>1389964028</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
     <table id="5570" parent="5561" name="AspNetUserTokens">
-      <CreatedTimestamp>2024-08-15.12:27:36.447</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.673</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.447</ModifiedTimestamp>
-      <ObjectId>605961235</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.673</ModifiedTimestamp>
+      <ObjectId>1453964256</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5571" parent="5561" name="AspNetUsers">
-      <CreatedTimestamp>2024-08-15.12:27:36.147</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.370</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.900</ModifiedTimestamp>
-      <ObjectId>269960038</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.123</ModifiedTimestamp>
+      <ObjectId>1117963059</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5572" parent="5561" name="CalenderAvailability">
-      <CreatedTimestamp>2024-08-15.12:27:36.183</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.407</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:37.990</ModifiedTimestamp>
-      <ObjectId>301960152</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:05.790</ModifiedTimestamp>
+      <ObjectId>1149963173</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
     <table id="5573" parent="5561" name="Fee">
-      <CreatedTimestamp>2024-08-15.12:27:36.220</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.443</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.533</ModifiedTimestamp>
-      <ObjectId>333960266</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.753</ModifiedTimestamp>
+      <ObjectId>1181963287</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5574" parent="5561" name="OrderHeaders">
-      <CreatedTimestamp>2024-08-15.12:27:36.483</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.713</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.937</ModifiedTimestamp>
-      <ObjectId>653961406</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.160</ModifiedTimestamp>
+      <ObjectId>1501964427</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5575" parent="5561" name="Property">
-      <CreatedTimestamp>2024-08-15.12:27:36.523</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.750</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:37.990</ModifiedTimestamp>
-      <ObjectId>701961577</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:05.790</ModifiedTimestamp>
+      <ObjectId>1549964598</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5576" parent="5561" name="ReservationStatus">
-      <CreatedTimestamp>2024-08-15.12:27:36.257</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.480</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:36.573</ModifiedTimestamp>
-      <ObjectId>365960380</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.793</ModifiedTimestamp>
+      <ObjectId>1213963401</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5577" parent="5561" name="Reservations">
-      <CreatedTimestamp>2024-08-15.12:27:36.570</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.790</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:37.190</ModifiedTimestamp>
-      <ObjectId>797961919</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:05.720</ModifiedTimestamp>
+      <ObjectId>1645964940</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
     <table id="5578" parent="5561" name="Reviews">
-      <CreatedTimestamp>2024-08-15.12:27:36.607</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.830</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:37.223</ModifiedTimestamp>
-      <ObjectId>877962204</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.453</ModifiedTimestamp>
+      <ObjectId>1725965225</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5579" parent="5561" name="ShoppingCart">
-      <CreatedTimestamp>2024-08-15.12:27:36.643</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.867</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:37.297</ModifiedTimestamp>
-      <ObjectId>925962375</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:04.530</ModifiedTimestamp>
+      <ObjectId>1773965396</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
     <table id="5580" parent="5561" name="__EFMigrationsHistory">
-      <CreatedTimestamp>2024-08-15.12:27:35.827</CreatedTimestamp>
+      <CreatedTimestamp>2024-08-15.13:09:03.060</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2024-08-15.12:27:35.827</ModifiedTimestamp>
-      <ObjectId>173959696</ObjectId>
+      <ModifiedTimestamp>2024-08-15.13:09:03.060</ModifiedTimestamp>
+      <ObjectId>1021962717</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
     <column id="5581" parent="5564" name="Id">
@@ -16931,9 +16931,9 @@
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5584" parent="5564" name="PK_Amenity">
-      <CreatedTimestamp>2024-08-15.12:27:36.070</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.070</ModifiedTimestamp>
-      <ObjectId>221959867</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.297</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.297</ModifiedTimestamp>
+      <ObjectId>1069962888</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Amenity</UnderlyingIndexName>
     </key>
@@ -16958,12 +16958,12 @@
     </column>
     <foreign-key id="5589" parent="5565" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
       <ColNames>RoleId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.297</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.297</ModifiedTimestamp>
-      <ObjectId>429960608</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.520</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.520</ModifiedTimestamp>
+      <ObjectId>1277963629</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>237959924</RefTableId>
+      <RefTableId>1085962945</RefTableId>
       <RefTableName>AspNetRoles</RefTableName>
     </foreign-key>
     <index id="5590" parent="5565" name="PK_AspNetRoleClaims">
@@ -16979,9 +16979,9 @@
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5592" parent="5565" name="PK_AspNetRoleClaims">
-      <CreatedTimestamp>2024-08-15.12:27:36.297</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.297</ModifiedTimestamp>
-      <ObjectId>413960551</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.520</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.520</ModifiedTimestamp>
+      <ObjectId>1261963572</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetRoleClaims</UnderlyingIndexName>
     </key>
@@ -17017,9 +17017,9 @@
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5599" parent="5566" name="PK_AspNetRoles">
-      <CreatedTimestamp>2024-08-15.12:27:36.110</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.110</ModifiedTimestamp>
-      <ObjectId>253959981</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.333</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.333</ModifiedTimestamp>
+      <ObjectId>1101963002</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetRoles</UnderlyingIndexName>
     </key>
@@ -17044,12 +17044,12 @@
     </column>
     <foreign-key id="5604" parent="5567" name="FK_AspNetUserClaims_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.333</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.333</ModifiedTimestamp>
-      <ObjectId>477960779</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.560</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.560</ModifiedTimestamp>
+      <ObjectId>1325963800</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <index id="5605" parent="5567" name="PK_AspNetUserClaims">
@@ -17065,9 +17065,9 @@
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5607" parent="5567" name="PK_AspNetUserClaims">
-      <CreatedTimestamp>2024-08-15.12:27:36.333</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.333</ModifiedTimestamp>
-      <ObjectId>461960722</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.557</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.557</ModifiedTimestamp>
+      <ObjectId>1309963743</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetUserClaims</UnderlyingIndexName>
     </key>
@@ -17092,12 +17092,12 @@
     </column>
     <foreign-key id="5612" parent="5568" name="FK_AspNetUserLogins_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.373</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.373</ModifiedTimestamp>
-      <ObjectId>525960950</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.597</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.597</ModifiedTimestamp>
+      <ObjectId>1373963971</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <index id="5613" parent="5568" name="PK_AspNetUserLogins">
@@ -17114,9 +17114,9 @@ ProviderKey</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5615" parent="5568" name="PK_AspNetUserLogins">
-      <CreatedTimestamp>2024-08-15.12:27:36.370</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.370</ModifiedTimestamp>
-      <ObjectId>509960893</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.597</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.597</ModifiedTimestamp>
+      <ObjectId>1357963914</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetUserLogins</UnderlyingIndexName>
     </key>
@@ -17132,22 +17132,22 @@ ProviderKey</ColNames>
     </column>
     <foreign-key id="5618" parent="5569" name="FK_AspNetUserRoles_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.410</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.410</ModifiedTimestamp>
-      <ObjectId>589961178</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.637</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.637</ModifiedTimestamp>
+      <ObjectId>1437964199</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <foreign-key id="5619" parent="5569" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
       <ColNames>RoleId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.410</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.410</ModifiedTimestamp>
-      <ObjectId>573961121</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.637</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.637</ModifiedTimestamp>
+      <ObjectId>1421964142</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>237959924</RefTableId>
+      <RefTableId>1085962945</RefTableId>
       <RefTableName>AspNetRoles</RefTableName>
     </foreign-key>
     <index id="5620" parent="5569" name="PK_AspNetUserRoles">
@@ -17164,9 +17164,9 @@ RoleId</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5622" parent="5569" name="PK_AspNetUserRoles">
-      <CreatedTimestamp>2024-08-15.12:27:36.410</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.410</ModifiedTimestamp>
-      <ObjectId>557961064</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.637</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.637</ModifiedTimestamp>
+      <ObjectId>1405964085</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetUserRoles</UnderlyingIndexName>
     </key>
@@ -17191,12 +17191,12 @@ RoleId</ColNames>
     </column>
     <foreign-key id="5627" parent="5570" name="FK_AspNetUserTokens_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.450</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.450</ModifiedTimestamp>
-      <ObjectId>637961349</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.673</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.673</ModifiedTimestamp>
+      <ObjectId>1485964370</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <index id="5628" parent="5570" name="PK_AspNetUserTokens">
@@ -17209,9 +17209,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5629" parent="5570" name="PK_AspNetUserTokens">
-      <CreatedTimestamp>2024-08-15.12:27:36.447</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.447</ModifiedTimestamp>
-      <ObjectId>621961292</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.673</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.673</ModifiedTimestamp>
+      <ObjectId>1469964313</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetUserTokens</UnderlyingIndexName>
     </key>
@@ -17334,9 +17334,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5656" parent="5571" name="PK_AspNetUsers">
-      <CreatedTimestamp>2024-08-15.12:27:36.150</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.150</ModifiedTimestamp>
-      <ObjectId>285960095</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.370</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.370</ModifiedTimestamp>
+      <ObjectId>1133963116</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_AspNetUsers</UnderlyingIndexName>
     </key>
@@ -17361,444 +17361,444 @@ Name</ColNames>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5661" parent="5572" name="PropertyInfoId">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <DefaultConstraintId>989962603</DefaultConstraintId>
-      <DefaultConstraintName>DF__CalenderA__Prope__3B01A16B</DefaultConstraintName>
-    </column>
-    <default id="5662" parent="5572" name="DF__CalenderA__Prope__3B01A16B">
-      <ColNames>PropertyInfoId</ColNames>
-      <DefaultExpression>0</DefaultExpression>
-      <ModifiedTimestamp>2024-08-15.12:27:37.920</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>989962603</ObjectId>
-    </default>
-    <foreign-key id="5663" parent="5572" name="FK_CalenderAvailability_Property_PropertyInfoId">
-      <ColNames>PropertyInfoId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:37.990</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:37.990</ModifiedTimestamp>
-      <ObjectId>1005962660</ObjectId>
+    <foreign-key id="5661" parent="5572" name="FK_CalenderAvailability_Property_PropertyId">
+      <ColNames>PropertyId</ColNames>
+      <CreatedTimestamp>2024-08-15.13:09:05.790</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:05.790</ModifiedTimestamp>
+      <ObjectId>1885965795</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>701961577</RefTableId>
+      <RefTableId>1549964598</RefTableId>
       <RefTableName>Property</RefTableName>
     </foreign-key>
-    <index id="5664" parent="5572" name="PK_CalenderAvailability">
+    <index id="5662" parent="5572" name="PK_CalenderAvailability">
       <Clustering>1</Clustering>
       <ColNames>CalenderId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5665" parent="5572" name="IX_CalenderAvailability_PropertyInfoId">
-      <ColNames>PropertyInfoId</ColNames>
+    <index id="5663" parent="5572" name="IX_CalenderAvailability_PropertyId">
+      <ColNames>PropertyId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5666" parent="5572" name="PK_CalenderAvailability">
-      <CreatedTimestamp>2024-08-15.12:27:36.183</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.183</ModifiedTimestamp>
-      <ObjectId>317960209</ObjectId>
+    <key id="5664" parent="5572" name="PK_CalenderAvailability">
+      <CreatedTimestamp>2024-08-15.13:09:03.410</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.410</ModifiedTimestamp>
+      <ObjectId>1165963230</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_CalenderAvailability</UnderlyingIndexName>
     </key>
-    <column id="5667" parent="5573" name="Id">
+    <column id="5665" parent="5573" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5668" parent="5573" name="FeeAmount">
+    <column id="5666" parent="5573" name="FeeAmount">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5669" parent="5573" name="Name">
+    <column id="5667" parent="5573" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="5670" parent="5573" name="PK_Fee">
+    <index id="5668" parent="5573" name="PK_Fee">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5671" parent="5573" name="PK_Fee">
-      <CreatedTimestamp>2024-08-15.12:27:36.220</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.220</ModifiedTimestamp>
-      <ObjectId>349960323</ObjectId>
+    <key id="5669" parent="5573" name="PK_Fee">
+      <CreatedTimestamp>2024-08-15.13:09:03.447</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.447</ModifiedTimestamp>
+      <ObjectId>1197963344</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Fee</UnderlyingIndexName>
     </key>
-    <column id="5672" parent="5574" name="Id">
+    <column id="5670" parent="5574" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5673" parent="5574" name="ApplicationUserId">
+    <column id="5671" parent="5574" name="ApplicationUserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5674" parent="5574" name="OrderDate">
+    <column id="5672" parent="5574" name="OrderDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5675" parent="5574" name="ShippingDate">
+    <column id="5673" parent="5574" name="ShippingDate">
       <DasType>datetime2|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5676" parent="5574" name="OrderTotal">
+    <column id="5674" parent="5574" name="OrderTotal">
       <DasType>float|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5677" parent="5574" name="OrderStatus">
+    <column id="5675" parent="5574" name="OrderStatus">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5678" parent="5574" name="PaymentStatus">
+    <column id="5676" parent="5574" name="PaymentStatus">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5679" parent="5574" name="TrackingNumber">
+    <column id="5677" parent="5574" name="TrackingNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5680" parent="5574" name="Carrier">
+    <column id="5678" parent="5574" name="Carrier">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5681" parent="5574" name="PaymentDate">
+    <column id="5679" parent="5574" name="PaymentDate">
       <DasType>datetime2|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5682" parent="5574" name="PaymentDueDate">
+    <column id="5680" parent="5574" name="PaymentDueDate">
       <DasType>datetime2|0s</DasType>
       <Position>11</Position>
     </column>
-    <column id="5683" parent="5574" name="SessionId">
+    <column id="5681" parent="5574" name="SessionId">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>12</Position>
     </column>
-    <column id="5684" parent="5574" name="PaymentIntentId">
+    <column id="5682" parent="5574" name="PaymentIntentId">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="5685" parent="5574" name="PhoneNumber">
+    <column id="5683" parent="5574" name="PhoneNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
-    <column id="5686" parent="5574" name="StreetAddress">
+    <column id="5684" parent="5574" name="StreetAddress">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
-    <column id="5687" parent="5574" name="City">
+    <column id="5685" parent="5574" name="City">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>16</Position>
     </column>
-    <column id="5688" parent="5574" name="State">
+    <column id="5686" parent="5574" name="State">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>17</Position>
     </column>
-    <column id="5689" parent="5574" name="PostalCode">
+    <column id="5687" parent="5574" name="PostalCode">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>18</Position>
     </column>
-    <column id="5690" parent="5574" name="Name">
+    <column id="5688" parent="5574" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>19</Position>
     </column>
-    <foreign-key id="5691" parent="5574" name="FK_OrderHeaders_AspNetUsers_ApplicationUserId">
+    <foreign-key id="5689" parent="5574" name="FK_OrderHeaders_AspNetUsers_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.487</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.487</ModifiedTimestamp>
-      <ObjectId>685961520</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.713</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.713</ModifiedTimestamp>
+      <ObjectId>1533964541</ObjectId>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="5692" parent="5574" name="PK_OrderHeaders">
+    <index id="5690" parent="5574" name="PK_OrderHeaders">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5693" parent="5574" name="IX_OrderHeaders_ApplicationUserId">
+    <index id="5691" parent="5574" name="IX_OrderHeaders_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5694" parent="5574" name="PK_OrderHeaders">
-      <CreatedTimestamp>2024-08-15.12:27:36.487</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.487</ModifiedTimestamp>
-      <ObjectId>669961463</ObjectId>
+    <key id="5692" parent="5574" name="PK_OrderHeaders">
+      <CreatedTimestamp>2024-08-15.13:09:03.713</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.713</ModifiedTimestamp>
+      <ObjectId>1517964484</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_OrderHeaders</UnderlyingIndexName>
     </key>
-    <column id="5695" parent="5575" name="Id">
+    <column id="5693" parent="5575" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5696" parent="5575" name="PropertyName">
+    <column id="5694" parent="5575" name="PropertyName">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5697" parent="5575" name="PropertyType">
+    <column id="5695" parent="5575" name="PropertyType">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5698" parent="5575" name="TotalOccupancy">
+    <column id="5696" parent="5575" name="TotalOccupancy">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5699" parent="5575" name="TotalBedrooms">
+    <column id="5697" parent="5575" name="TotalBedrooms">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5700" parent="5575" name="TotalBathrooms">
+    <column id="5698" parent="5575" name="TotalBathrooms">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5701" parent="5575" name="Description">
+    <column id="5699" parent="5575" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5702" parent="5575" name="OwnerId">
+    <column id="5700" parent="5575" name="OwnerId">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5703" parent="5575" name="Address">
+    <column id="5701" parent="5575" name="Address">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5704" parent="5575" name="City">
+    <column id="5702" parent="5575" name="City">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="5705" parent="5575" name="State">
+    <column id="5703" parent="5575" name="State">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="5706" parent="5575" name="LastUpdated">
+    <column id="5704" parent="5575" name="LastUpdated">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="5707" parent="5575" name="Latitude">
+    <column id="5705" parent="5575" name="Latitude">
       <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <column id="5708" parent="5575" name="Longitude">
+    <column id="5706" parent="5575" name="Longitude">
       <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
-    <column id="5709" parent="5575" name="ImageUrl">
+    <column id="5707" parent="5575" name="ImageUrl">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
-    <column id="5710" parent="5575" name="SecondImageUrl">
+    <column id="5708" parent="5575" name="SecondImageUrl">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>16</Position>
     </column>
-    <column id="5711" parent="5575" name="Prices">
+    <column id="5709" parent="5575" name="Prices">
       <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>17</Position>
     </column>
-    <column id="5712" parent="5575" name="AmenityId">
+    <column id="5710" parent="5575" name="AmenityId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>18</Position>
     </column>
-    <column id="5713" parent="5575" name="FeeId">
+    <column id="5711" parent="5575" name="FeeId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>19</Position>
     </column>
-    <column id="5714" parent="5575" name="ApplicationUserId">
+    <column id="5712" parent="5575" name="ApplicationUserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>21</Position>
     </column>
-    <foreign-key id="5715" parent="5575" name="FK_Property_Amenity_AmenityId">
+    <foreign-key id="5713" parent="5575" name="FK_Property_Amenity_AmenityId">
       <ColNames>AmenityId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.530</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.530</ModifiedTimestamp>
-      <ObjectId>733961691</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.750</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.750</ModifiedTimestamp>
+      <ObjectId>1581964712</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>205959810</RefTableId>
+      <RefTableId>1053962831</RefTableId>
       <RefTableName>Amenity</RefTableName>
     </foreign-key>
-    <foreign-key id="5716" parent="5575" name="FK_Property_Fee_FeeId">
+    <foreign-key id="5714" parent="5575" name="FK_Property_Fee_FeeId">
       <ColNames>FeeId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.533</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.533</ModifiedTimestamp>
-      <ObjectId>781961862</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.753</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.753</ModifiedTimestamp>
+      <ObjectId>1629964883</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>333960266</RefTableId>
+      <RefTableId>1181963287</RefTableId>
       <RefTableName>Fee</RefTableName>
     </foreign-key>
-    <foreign-key id="5717" parent="5575" name="FK_Property_AspNetUsers_ApplicationUserId">
+    <foreign-key id="5715" parent="5575" name="FK_Property_AspNetUsers_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.530</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.530</ModifiedTimestamp>
-      <ObjectId>749961748</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.753</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.753</ModifiedTimestamp>
+      <ObjectId>1597964769</ObjectId>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="5718" parent="5575" name="PK_Property">
+    <index id="5716" parent="5575" name="PK_Property">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5719" parent="5575" name="IX_Property_AmenityId">
+    <index id="5717" parent="5575" name="IX_Property_AmenityId">
       <ColNames>AmenityId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5720" parent="5575" name="IX_Property_ApplicationUserId">
+    <index id="5718" parent="5575" name="IX_Property_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
       <Position>3</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5721" parent="5575" name="IX_Property_FeeId">
+    <index id="5719" parent="5575" name="IX_Property_FeeId">
       <ColNames>FeeId</ColNames>
       <Position>5</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5722" parent="5575" name="PK_Property">
-      <CreatedTimestamp>2024-08-15.12:27:36.523</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.523</ModifiedTimestamp>
-      <ObjectId>717961634</ObjectId>
+    <key id="5720" parent="5575" name="PK_Property">
+      <CreatedTimestamp>2024-08-15.13:09:03.750</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.750</ModifiedTimestamp>
+      <ObjectId>1565964655</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Property</UnderlyingIndexName>
     </key>
-    <column id="5723" parent="5576" name="Id">
+    <column id="5721" parent="5576" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5724" parent="5576" name="Type">
+    <column id="5722" parent="5576" name="Type">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="5725" parent="5576" name="PK_ReservationStatus">
+    <index id="5723" parent="5576" name="PK_ReservationStatus">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5726" parent="5576" name="PK_ReservationStatus">
-      <CreatedTimestamp>2024-08-15.12:27:36.260</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.260</ModifiedTimestamp>
-      <ObjectId>381960437</ObjectId>
+    <key id="5724" parent="5576" name="PK_ReservationStatus">
+      <CreatedTimestamp>2024-08-15.13:09:03.483</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.483</ModifiedTimestamp>
+      <ObjectId>1229963458</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ReservationStatus</UnderlyingIndexName>
     </key>
-    <column id="5727" parent="5577" name="Id">
+    <column id="5725" parent="5577" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5728" parent="5577" name="PropertyId">
+    <column id="5726" parent="5577" name="PropertyId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5729" parent="5577" name="StartDate">
+    <column id="5727" parent="5577" name="StartDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5730" parent="5577" name="EndDate">
+    <column id="5728" parent="5577" name="EndDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5731" parent="5577" name="TotalPrice">
+    <column id="5729" parent="5577" name="TotalPrice">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5732" parent="5577" name="LastUpdated">
+    <column id="5730" parent="5577" name="LastUpdated">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5733" parent="5577" name="ReservationStatusId">
+    <column id="5731" parent="5577" name="ReservationStatusId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5734" parent="5577" name="ApplicationUserId">
+    <column id="5732" parent="5577" name="ApplicationUserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
+    <column id="5733" parent="5577" name="HostCount">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <DefaultConstraintId>1869965738</DefaultConstraintId>
+      <DefaultConstraintName>DF__Reservati__HostC__6F7569AA</DefaultConstraintName>
+    </column>
+    <default id="5734" parent="5577" name="DF__Reservati__HostC__6F7569AA">
+      <ColNames>HostCount</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+      <ModifiedTimestamp>2024-08-15.13:09:05.720</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1869965738</ObjectId>
+    </default>
     <foreign-key id="5735" parent="5577" name="FK_Reservations_Property_PropertyId">
       <ColNames>PropertyId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.570</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.570</ModifiedTimestamp>
-      <ObjectId>845962090</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.793</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.793</ModifiedTimestamp>
+      <ObjectId>1693965111</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>701961577</RefTableId>
+      <RefTableId>1549964598</RefTableId>
       <RefTableName>Property</RefTableName>
     </foreign-key>
     <foreign-key id="5736" parent="5577" name="FK_Reservations_ReservationStatus_ReservationStatusId">
       <ColNames>ReservationStatusId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.570</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.570</ModifiedTimestamp>
-      <ObjectId>861962147</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.793</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.793</ModifiedTimestamp>
+      <ObjectId>1709965168</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>365960380</RefTableId>
+      <RefTableId>1213963401</RefTableId>
       <RefTableName>ReservationStatus</RefTableName>
     </foreign-key>
     <foreign-key id="5737" parent="5577" name="FK_Reservations_AspNetUsers_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.570</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.570</ModifiedTimestamp>
-      <ObjectId>829962033</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.793</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.793</ModifiedTimestamp>
+      <ObjectId>1677965054</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <index id="5738" parent="5577" name="PK_Reservations">
@@ -17824,9 +17824,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5742" parent="5577" name="PK_Reservations">
-      <CreatedTimestamp>2024-08-15.12:27:36.570</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.570</ModifiedTimestamp>
-      <ObjectId>813961976</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.790</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.790</ModifiedTimestamp>
+      <ObjectId>1661964997</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Reservations</UnderlyingIndexName>
     </key>
@@ -17853,12 +17853,12 @@ Name</ColNames>
     </column>
     <foreign-key id="5747" parent="5578" name="FK_Reviews_Reservations_ReservationId">
       <ColNames>ReservationId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.610</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.610</ModifiedTimestamp>
-      <ObjectId>909962318</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.830</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.830</ModifiedTimestamp>
+      <ObjectId>1757965339</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>797961919</RefTableId>
+      <RefTableId>1645964940</RefTableId>
       <RefTableName>Reservations</RefTableName>
     </foreign-key>
     <index id="5748" parent="5578" name="PK_Reviews">
@@ -17874,9 +17874,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5750" parent="5578" name="PK_Reviews">
-      <CreatedTimestamp>2024-08-15.12:27:36.610</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.610</ModifiedTimestamp>
-      <ObjectId>893962261</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.830</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.830</ModifiedTimestamp>
+      <ObjectId>1741965282</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Reviews</UnderlyingIndexName>
     </key>
@@ -17902,21 +17902,21 @@ Name</ColNames>
     </column>
     <foreign-key id="5755" parent="5579" name="FK_ShoppingCart_Reservations_ProductId">
       <ColNames>ProductId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.647</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.647</ModifiedTimestamp>
-      <ObjectId>973962546</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.870</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.870</ModifiedTimestamp>
+      <ObjectId>1821965567</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>797961919</RefTableId>
+      <RefTableId>1645964940</RefTableId>
       <RefTableName>Reservations</RefTableName>
     </foreign-key>
     <foreign-key id="5756" parent="5579" name="FK_ShoppingCart_AspNetUsers_ApplicationUserId">
       <ColNames>ApplicationUserId</ColNames>
-      <CreatedTimestamp>2024-08-15.12:27:36.647</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.647</ModifiedTimestamp>
-      <ObjectId>957962489</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.870</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.870</ModifiedTimestamp>
+      <ObjectId>1805965510</ObjectId>
       <RefColNames>Id</RefColNames>
-      <RefTableId>269960038</RefTableId>
+      <RefTableId>1117963059</RefTableId>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
     <index id="5757" parent="5579" name="PK_ShoppingCart">
@@ -17937,9 +17937,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5760" parent="5579" name="PK_ShoppingCart">
-      <CreatedTimestamp>2024-08-15.12:27:36.647</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:36.647</ModifiedTimestamp>
-      <ObjectId>941962432</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.870</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.870</ModifiedTimestamp>
+      <ObjectId>1789965453</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ShoppingCart</UnderlyingIndexName>
     </key>
@@ -17961,9 +17961,9 @@ Name</ColNames>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
     <key id="5764" parent="5580" name="PK___EFMigrationsHistory">
-      <CreatedTimestamp>2024-08-15.12:27:35.827</CreatedTimestamp>
-      <ModifiedTimestamp>2024-08-15.12:27:35.827</ModifiedTimestamp>
-      <ObjectId>189959753</ObjectId>
+      <CreatedTimestamp>2024-08-15.13:09:03.063</CreatedTimestamp>
+      <ModifiedTimestamp>2024-08-15.13:09:03.063</ModifiedTimestamp>
+      <ObjectId>1037962774</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
     </key>

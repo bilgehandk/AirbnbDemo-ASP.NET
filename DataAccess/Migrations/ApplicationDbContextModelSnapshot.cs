@@ -53,15 +53,12 @@ namespace DataAccess.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PropertyInfoId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("CalenderId");
 
-                    b.HasIndex("PropertyInfoId");
+                    b.HasIndex("PropertyId");
 
                     b.ToTable("CalenderAvailability");
                 });
@@ -261,6 +258,9 @@ namespace DataAccess.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("HostCount")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("LastUpdated")
                         .HasColumnType("datetime2");
@@ -598,7 +598,7 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Infrastructure.Models.PropertyInfo", "PropertyInfo")
                         .WithMany()
-                        .HasForeignKey("PropertyInfoId")
+                        .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

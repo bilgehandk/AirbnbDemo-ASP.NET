@@ -11,7 +11,7 @@ namespace Infrastructure.Models
         public int PropertyId { get; set; }
 
         [ForeignKey("PropertyId")]
-        public PropertyInfo PropertyInfo { get; set; }
+        public PropertyInfo? PropertyInfo { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -24,11 +24,11 @@ namespace Infrastructure.Models
         public int ReservationStatusId { get; set; }
 
         [ForeignKey("ReservationStatusId")]
-        public ReservationStatus ReservationStatus { get; set; }
+        public ReservationStatus? ReservationStatus { get; set; }
 
         public string ApplicationUserId { get; set; }
 
         [ForeignKey("ApplicationUserId")]
-        public ApplicationUser ApplicationUser { get; set; }
+        public ApplicationUser? ApplicationUser { get; set; }
     }
 }

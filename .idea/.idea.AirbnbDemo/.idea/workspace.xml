@@ -11,8 +11,10 @@
     <list default="true" id="564da072-45bc-41ca-84ba-b26c0101fada" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/dataSources/297272ef-2602-4153-8ca8-004677439309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/dataSources/297272ef-2602-4153-8ca8-004677439309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirbnbDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/PropertyDetail.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirbnbDemo/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/AirbnbDemo/bin/Debug/net8.0/AirbnbDemo.staticwebassets.runtime.json" afterDir="false" />
@@ -54,7 +56,7 @@
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/PropertyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/PropertyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Models/Reservation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Models/Reservation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs" afterDir="false" />
@@ -102,8 +104,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/bilgehandemirkaya/AirbnbDemo-ASP.NET/AirbnbDemo/Pages/Property/InsertProperty.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12e74125a2264b7b9deab6acc3f385ce32800/c3/f3ca199f/DatabaseGeneratedOption.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3c0614bfdf064d6d905f2d658420134d15800/73/3d35e8fa/ClaimsIdentity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/438ddfed5ed0473cad6a426693c8c1e4c6c00/f1/156a7a4b/SelectListItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e262e3807b340ebb756a8e16a60b31e12000/60/142a58e6/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e262e3807b340ebb756a8e16a60b31e12000/e7/ff445e59/IdentityUser`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c38c807781c1461996f08078003ccde31a908/b1/784d5802/IdentityDbContext`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
