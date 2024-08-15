@@ -68,6 +68,7 @@ namespace CBTDWeb.Pages
         //                ReservationStatus = new()
         //            };
         //            reservation.ReservationStatus.Type = "Request";
+        //             _unitOfWork.Reservation.Add(reservation);
         //        }
         //        else
         //        {
